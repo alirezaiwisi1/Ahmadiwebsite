@@ -2,6 +2,7 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
+  <script>(function(){try{var t=localStorage.getItem("ahmadi-theme");if(!t){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}document.documentElement.setAttribute("data-theme",t);document.documentElement.classList.add("js");}catch(e){document.documentElement.classList.add("js");}})();</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>کتاب‌ها و منابع | دین صلح و نور احمدی</title>
   <meta name="description" content="کتابخانه منابع دین صلح و نور احمدی؛ مانیفست مهدی و هدف حکیم با دانلود مستقیم، نسخه‌های صوتی و منابع تلگرام جامعه فارسی‌زبان.">
@@ -60,10 +61,14 @@
           <li><a class="nav-tg" href="https://t.me/theahmadireligionfarsi" target="_blank" rel="noopener" aria-label="گروه تلگرام دین صلح و نور احمدی — باز شدن در تلگرام">گروه تلگرام <span aria-hidden="true">↗</span></a></li>
         </ul>
       </nav>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="تغییر پوسته روشن و تاریک" aria-pressed="false">
+        <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">☾</span>
+        <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☀</span>
+      </button>
     </div>
   </header>
 
-  <main id="main-content">
+  <main id="main-content" tabindex="-1">
     <nav class="breadcrumb container" aria-label="مسیر صفحه">
       <ol>
         <li><a href="index.html">خانه</a></li>
@@ -86,29 +91,40 @@
           <p>دو منبع اصلی دین صلح و نور احمدی؛ برای کسانی که تلگرام ندارند، دانلود مستقیم نیز در دسترس است.</p>
         </div>
         <div class="card-grid card-grid--2">
-          <article class="card resource-card">
-            <span class="badge">کتاب</span>
-            <h3>مانیفست مهدی</h3>
-            <p>
-              مرجع اصلی معرفی دین صلح و نور احمدی؛ متن پایه این دعوت که روایت عهدهای هفت‌گانه و ادعاهای
-              محوری این دین در آن بیان شده است.
-            </p>
-            <div class="btn-row">
-              <a class="btn btn--primary" href="https://theahmadireligion.org/download/42616/?tmstv=1765124110" target="_blank" rel="noopener" aria-label="دانلود مستقیم مانیفست مهدی — باز شدن در وب‌سایت رسمی">دانلود مستقیم مانیفست مهدی</a>
-              <a class="btn btn--gold" href="https://t.me/theahmadireligion_farsi_channel/7125?single" target="_blank" rel="noopener" aria-label="دانلود مانیفست مهدی در تلگرام — باز شدن در تلگرام">دریافت از تلگرام ↗</a>
-              <a class="btn btn--ghost" href="https://t.me/theahmadireligion_farsi_channel/6010" target="_blank" rel="noopener" aria-label="خوانش صوتی در تلگرام — باز شدن در تلگرام">خوانش صوتی ↗</a>
+          <article class="card resource-card resource-card--media" data-reveal>
+            <div class="resource-card__cover">
+              <img src="assets/images/mahdis-manifesto-persian.webp" alt="جلد کتاب مانیفست مهدی" width="600" height="800" loading="lazy">
+            </div>
+            <div>
+              <span class="badge">کتاب</span>
+              <h3>مانیفست مهدی</h3>
+              <p>
+                مرجع اصلی معرفی دین صلح و نور احمدی؛ متن پایه این دعوت که روایت عهدهای هفت‌گانه و ادعاهای
+                محوری این دین در آن بیان شده است.
+              </p>
+              <div class="btn-row">
+                <a class="btn btn--primary" href="https://theahmadireligion.org/download/42616/?tmstv=1765124110" target="_blank" rel="noopener" aria-label="دانلود مستقیم مانیفست مهدی — باز شدن در وب‌سایت رسمی">دانلود مستقیم</a>
+                <a class="btn btn--gold" href="https://t.me/theahmadireligion_farsi_channel/7125?single" target="_blank" rel="noopener" aria-label="دانلود مانیفست مهدی در تلگرام — باز شدن در تلگرام">دانلود در تلگرام ↗</a>
+                <a class="btn btn--ghost" href="https://t.me/theahmadireligion_farsi_channel/7127" target="_blank" rel="noopener" aria-label="خوانش صوتی مانیفست مهدی در تلگرام — باز شدن در تلگرام">خوانش صوتی در تلگرام ↗</a>
+              </div>
             </div>
           </article>
-          <article class="card resource-card">
-            <span class="badge">کتاب</span>
-            <h3>هدف حکیم</h3>
-            <p>
-              کتاب بنیادین این دعوت که در منابع رسمی به عبدالله هاشم (ابا الصادق) نسبت داده شده است؛
-              دارای چهل‌ودو باب و آغاز با مفهوم عهدهای الهی میان خدا و انسان.
-            </p>
-            <div class="btn-row">
-              <a class="btn btn--primary" href="https://theahmadireligion.org/download/42889/?tmstv=1765481076" target="_blank" rel="noopener" aria-label="دانلود مستقیم هدف حکیم — باز شدن در وب‌سایت رسمی">دانلود مستقیم هدف حکیم</a>
-              <a class="btn btn--gold" href="https://t.me/theahmadireligion_farsi_channel/7121?single" target="_blank" rel="noopener" aria-label="هدف حکیم — دانلود کتاب و خوانش صوتی در تلگرام">دریافت از تلگرام و خوانش صوتی ↗</a>
+          <article class="card resource-card resource-card--media" data-reveal>
+            <div class="resource-card__cover">
+              <img src="assets/images/hadaf-hakim-persian.webp" alt="جلد کتاب هدف حکیم" width="600" height="800" loading="lazy">
+            </div>
+            <div>
+              <span class="badge">کتاب</span>
+              <h3>هدف حکیم</h3>
+              <p>
+                کتاب بنیادین این دعوت که در منابع رسمی به عبدالله هاشم (ابا الصادق) نسبت داده شده است؛
+                همراه با خوانش صوتی در تلگرام.
+              </p>
+              <div class="btn-row">
+                <a class="btn btn--primary" href="https://theahmadireligion.org/download/42889/?tmstv=1765481076" target="_blank" rel="noopener" aria-label="دانلود مستقیم هدف حکیم — باز شدن در وب‌سایت رسمی">دانلود مستقیم</a>
+                <a class="btn btn--gold" href="https://t.me/theahmadireligion_farsi_channel/7121?single" target="_blank" rel="noopener" aria-label="هدف حکیم — دانلود کتاب در تلگرام">دانلود در تلگرام ↗</a>
+                <a class="btn btn--ghost" href="https://t.me/theahmadireligion_farsi_channel/6010" target="_blank" rel="noopener" aria-label="خوانش صوتی هدف حکیم در تلگرام — باز شدن در تلگرام">خوانش صوتی در تلگرام ↗</a>
+              </div>
             </div>
           </article>
         </div>
@@ -124,10 +140,10 @@
         <div class="card-grid card-grid--2">
           <article class="card resource-card">
             <span class="badge">صوتی</span>
-            <h3>خوانش صوتی</h3>
-            <p>خوانش صوتی منتشرشده در کانال تلگرام جامعه فارسی‌زبان.</p>
+            <h3>مانیفست مهدی — خوانش صوتی</h3>
+            <p>خوانش صوتی کتاب مانیفست مهدی در کانال تلگرام جامعه فارسی‌زبان.</p>
             <div class="btn-row">
-              <a class="btn btn--gold" href="https://t.me/theahmadireligion_farsi_channel/6010" target="_blank" rel="noopener" aria-label="خوانش صوتی در تلگرام — باز شدن در تلگرام">خوانش صوتی ↗</a>
+              <a class="btn btn--gold" href="https://t.me/theahmadireligion_farsi_channel/7127" target="_blank" rel="noopener" aria-label="خوانش صوتی مانیفست مهدی در تلگرام — باز شدن در تلگرام">خوانش صوتی در تلگرام ↗</a>
             </div>
           </article>
           <article class="card resource-card">
@@ -135,7 +151,7 @@
             <h3>هدف حکیم — خوانش صوتی</h3>
             <p>نسخه صوتی کتاب هدف حکیم، همراه با فایل کتاب، در کانال تلگرام.</p>
             <div class="btn-row">
-              <a class="btn btn--gold" href="https://t.me/theahmadireligion_farsi_channel/7121?single" target="_blank" rel="noopener" aria-label="هدف حکیم — دانلود کتاب و خوانش صوتی در تلگرام">کتاب و خوانش صوتی ↗</a>
+              <a class="btn btn--gold" href="https://t.me/theahmadireligion_farsi_channel/6010" target="_blank" rel="noopener" aria-label="خوانش صوتی هدف حکیم در تلگرام — باز شدن در تلگرام">خوانش صوتی در تلگرام ↗</a>
             </div>
           </article>
         </div>

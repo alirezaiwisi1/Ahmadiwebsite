@@ -2,21 +2,22 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
+  <script>(function(){try{var t=localStorage.getItem("ahmadi-theme");if(!t){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}document.documentElement.setAttribute("data-theme",t);document.documentElement.classList.add("js");}catch(e){document.documentElement.classList.add("js");}})();</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>هدف حکیم | دین صلح و نور احمدی</title>
-  <meta name="description" content="معرفی کتاب «هدف حکیم» از منابع دین صلح و نور احمدی؛ ساختار چهل‌ودو باب، آغاز با مفهوم عهدهای الهی و راه‌های دریافت کتاب و خوانش صوتی.">
+  <meta name="description" content="معرفی کتاب «هدف حکیم»؛ کتاب بنیادین دین صلح و نور احمدی به قلم عبدالله هاشم (ابا الصادق) و راه‌های دریافت کتاب و خوانش صوتی آن.">
   <link rel="canonical" href="https://alirezaiwisi1.github.io/Ahmadiwebsite/wisdom.html">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fa_IR">
   <meta property="og:site_name" content="دین صلح و نور احمدی">
   <meta property="og:title" content="هدف حکیم | دین صلح و نور احمدی">
-  <meta property="og:description" content="معرفی کتاب «هدف حکیم» از منابع دین صلح و نور احمدی و راه‌های دریافت آن.">
+  <meta property="og:description" content="معرفی کتاب «هدف حکیم» اثر عبدالله هاشم (ابا الصادق) از منابع دین صلح و نور احمدی و راه‌های دریافت آن.">
   <meta property="og:url" content="https://alirezaiwisi1.github.io/Ahmadiwebsite/wisdom.html">
-  <meta property="og:image" content="https://alirezaiwisi1.github.io/Ahmadiwebsite/assets/images/logo.webp">
+  <meta property="og:image" content="https://alirezaiwisi1.github.io/Ahmadiwebsite/assets/images/hadaf-hakim-persian.webp">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="هدف حکیم | دین صلح و نور احمدی">
-  <meta name="twitter:description" content="معرفی کتاب «هدف حکیم» از منابع دین صلح و نور احمدی و راه‌های دریافت آن.">
-  <meta name="twitter:image" content="https://alirezaiwisi1.github.io/Ahmadiwebsite/assets/images/logo.webp">
+  <meta name="twitter:description" content="معرفی کتاب «هدف حکیم» اثر عبدالله هاشم (ابا الصادق) از منابع دین صلح و نور احمدی و راه‌های دریافت آن.">
+  <meta name="twitter:image" content="https://alirezaiwisi1.github.io/Ahmadiwebsite/assets/images/hadaf-hakim-persian.webp">
   <meta name="theme-color" content="#0b1020">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="alternate icon" href="assets/images/logo.webp" type="image/webp">
@@ -60,10 +61,14 @@
           <li><a class="nav-tg" href="https://t.me/theahmadireligionfarsi" target="_blank" rel="noopener" aria-label="گروه تلگرام دین صلح و نور احمدی — باز شدن در تلگرام">گروه تلگرام <span aria-hidden="true">↗</span></a></li>
         </ul>
       </nav>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="تغییر پوسته روشن و تاریک" aria-pressed="false">
+        <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">☾</span>
+        <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☀</span>
+      </button>
     </div>
   </header>
 
-  <main id="main-content">
+  <main id="main-content" tabindex="-1">
     <nav class="breadcrumb container" aria-label="مسیر صفحه">
       <ol>
         <li><a href="index.html">خانه</a></li>
@@ -81,23 +86,29 @@
 
     <section class="section" aria-labelledby="what-title">
       <div class="container">
-        <div class="card-grid card-grid--2">
-          <article class="card">
-            <h2 id="what-title">این کتاب چیست؟</h2>
-            <p>
-              بر اساس منابع این دعوت، «هدف حکیم» کتابی بنیادین برای شناخت آموزه‌های این دین است که در
-              کنار «مانیفست مهدی» جایگاه اصلی دارد. این کتاب در منابع رسمی به عبدالله هاشم (ابا الصادق)،
-              رهبر معرفی‌شده این دعوت در عصر حاضر، نسبت داده شده است.
-            </p>
-          </article>
-          <article class="card">
-            <h2>ساختار کتاب</h2>
-            <p>
-              بر اساس منابع این دعوت، «هدف حکیم» چهل‌ودو «باب» دارد و با مفهوم عهدهای الهی میان خدا و
-              انسان آغاز می‌شود؛ همان چارچوبی که ستون آموزه‌های این دین است. شرح هر باب در خودِ کتاب
-              آمده است.
-            </p>
-          </article>
+        <div class="book-feature">
+          <div class="book-cover" data-reveal>
+            <img src="assets/images/hadaf-hakim-persian.webp" alt="جلد کتاب هدف حکیم" width="600" height="800">
+          </div>
+          <div>
+            <h2 id="what-title">هدف حکیم</h2>
+            <ul class="book-facts">
+              <li><strong>نویسنده:</strong> عبدالله هاشم (ابا الصادق)</li>
+              <li><strong>دسترسی:</strong> دانلود مستقیم، نسخه تلگرام و خوانش صوتی</li>
+            </ul>
+            <div class="measure">
+              <p>
+                بر اساس منابع این دعوت، «هدف حکیم» کتابی بنیادین برای شناخت آموزه‌های این دین است که در
+                کنار «مانیفست مهدی» جایگاه اصلی دارد. این کتاب در منابع رسمی به عبدالله هاشم
+                (ابا الصادق)، رهبر معرفی‌شده این دعوت در عصر حاضر، نسبت داده شده است.
+              </p>
+              <p>
+                برای آشنایی با چارچوب مشترک آموزه‌های این دعوت — عهدهای الهی و سه معیار شناخت حجت —
+                صفحه <a href="teachings.html">آموزه‌ها</a> را ببینید؛ شرح درون‌مایه کتاب در خودِ متن آن
+                آمده است.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -111,11 +122,11 @@
         <ol class="steps">
           <li>
             <h3>با مانیفست مهدی آشنا شوید</h3>
-            <p>چون «هدف حکیم» بر همان چارچوب عهدهای الهی استوار است، آشنایی نخست با مانیفست مهدی راه را بازتر می‌کند.</p>
+            <p>«هدف حکیم» و «مانیفست مهدی» هر دو از کتاب‌های بنیادین این دعوت‌اند؛ آشنایی نخست با مانیفست مهدی راه را بازتر می‌کند.</p>
           </li>
           <li>
-            <h3>از باب نخست شروع کنید</h3>
-            <p>کتاب با مفهوم عهدهای الهی میان خدا و انسان آغاز می‌شود؛ خواندن پیوسته از آغاز توصیه می‌شود.</p>
+            <h3>مطالعه مستقیم</h3>
+            <p>برای آشنایی جدی، مطالعه مستقیم متن کتاب توصیه می‌شود؛ این صفحه تنها راهنمای دسترسی است.</p>
           </li>
           <li>
             <h3>با خوانش صوتی دنبال کنید</h3>
@@ -131,13 +142,19 @@
           <h2 id="download-title">دریافت کتاب هدف حکیم</h2>
           <p>برای کسانی که تلگرام ندارند، دانلود مستقیم از وب‌سایت رسمی در دسترس است.</p>
         </div>
-        <div class="card resource-card" style="max-width: 46rem; margin-inline: auto;">
-          <span class="badge">کتاب</span>
-          <h3>کتاب هدف حکیم</h3>
-          <p>کتاب بنیادین این دعوت با چهل‌ودو باب، همراه با خوانش صوتی در تلگرام.</p>
-          <div class="btn-row">
-            <a class="btn btn--primary" href="https://theahmadireligion.org/download/42889/?tmstv=1765481076" target="_blank" rel="noopener" aria-label="دانلود مستقیم هدف حکیم — باز شدن در وب‌سایت رسمی">دانلود مستقیم هدف حکیم</a>
-            <a class="btn btn--gold" href="https://t.me/theahmadireligion_farsi_channel/7121?single" target="_blank" rel="noopener" aria-label="هدف حکیم — دانلود کتاب و خوانش صوتی در تلگرام">دریافت از تلگرام و خوانش صوتی ↗</a>
+        <div class="card resource-card resource-card--media" style="max-width: 46rem; margin-inline: auto;">
+          <div class="resource-card__cover">
+            <img src="assets/images/hadaf-hakim-persian.webp" alt="جلد کتاب هدف حکیم" width="600" height="800" loading="lazy">
+          </div>
+          <div>
+            <span class="badge">کتاب</span>
+            <h3>کتاب هدف حکیم</h3>
+            <p>کتاب بنیادین این دعوت به قلم عبدالله هاشم (ابا الصادق)؛ همراه با خوانش صوتی در تلگرام.</p>
+            <div class="btn-row">
+              <a class="btn btn--primary" href="https://theahmadireligion.org/download/42889/?tmstv=1765481076" target="_blank" rel="noopener" aria-label="دانلود مستقیم هدف حکیم — باز شدن در وب‌سایت رسمی">دانلود مستقیم</a>
+              <a class="btn btn--gold" href="https://t.me/theahmadireligion_farsi_channel/7121?single" target="_blank" rel="noopener" aria-label="هدف حکیم — دانلود کتاب در تلگرام">دانلود در تلگرام ↗</a>
+              <a class="btn btn--ghost" href="https://t.me/theahmadireligion_farsi_channel/6010" target="_blank" rel="noopener" aria-label="خوانش صوتی هدف حکیم در تلگرام — باز شدن در تلگرام">خوانش صوتی در تلگرام ↗</a>
+            </div>
           </div>
         </div>
       </div>

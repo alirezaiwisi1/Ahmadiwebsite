@@ -2,6 +2,7 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
+  <script>(function(){try{var t=localStorage.getItem("ahmadi-theme");if(!t){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}document.documentElement.setAttribute("data-theme",t);document.documentElement.classList.add("js");}catch(e){document.documentElement.classList.add("js");}})();</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>صفحه پیدا نشد | دین صلح و نور احمدی</title>
   <meta name="robots" content="noindex">
@@ -19,10 +20,14 @@
         <img class="brand__logo" src="assets/images/logo.webp" alt="نشان دین صلح و نور احمدی" width="160" height="160">
         <span>دین صلح و نور احمدی</span>
       </a>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="تغییر پوسته روشن و تاریک" aria-pressed="false">
+        <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">☾</span>
+        <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☀</span>
+      </button>
     </div>
   </header>
 
-  <main id="main-content" class="section">
+  <main id="main-content" class="section" tabindex="-1">
     <div class="container text-center">
       <h1>صفحه پیدا نشد</h1>
       <p class="muted">صفحه‌ای که به‌دنبال آن بودید وجود ندارد یا نشانی آن تغییر کرده است.</p>

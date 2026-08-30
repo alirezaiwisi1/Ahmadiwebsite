@@ -2,6 +2,7 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
+  <script>(function(){try{var t=localStorage.getItem("ahmadi-theme");if(!t){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}document.documentElement.setAttribute("data-theme",t);document.documentElement.classList.add("js");}catch(e){document.documentElement.classList.add("js");}})();</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>دین صلح و نور احمدی | معرفی، آموزه‌ها و منابع</title>
   <meta name="description" content="وب‌سایت معرفی دین صلح و نور احمدی؛ آشنایی با این دعوت، آموزه‌ها و عهدهای هفت‌گانه، منابع اصلی چون مانیفست مهدی و هدف حکیم، و ارتباط با جامعه فارسی‌زبان.">
@@ -68,10 +69,14 @@
           <li><a class="nav-tg" href="https://t.me/theahmadireligionfarsi" target="_blank" rel="noopener" aria-label="گروه تلگرام دین صلح و نور احمدی — باز شدن در تلگرام">گروه تلگرام <span aria-hidden="true">↗</span></a></li>
         </ul>
       </nav>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="تغییر پوسته روشن و تاریک" aria-pressed="false">
+        <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">☾</span>
+        <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☀</span>
+      </button>
     </div>
   </header>
 
-  <main id="main-content">
+  <main id="main-content" tabindex="-1">
     <!-- Hero -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="container hero__inner">
@@ -104,19 +109,19 @@
           </p>
         </div>
         <div class="card-grid card-grid--3">
-          <article class="card">
+          <article class="card" data-reveal>
             <span class="card__icon" aria-hidden="true">✦</span>
             <h3>عهدهای هفت‌گانه</h3>
             <p>بر اساس آموزه‌های این دین، تاریخ هدایت الهی در قالب هفت عهد میان خدا و انسان روایت می‌شود؛ از آدم تا عهد هفتم.</p>
             <a class="card__link" href="teachings.html">آموزه‌ها و هفت عهد</a>
           </article>
-          <article class="card">
+          <article class="card" data-reveal>
             <span class="card__icon" aria-hidden="true">✧</span>
             <h3>منابع اصلی</h3>
             <p>«مانیفست مهدی» مرجع اصلی معرفی این دعوت است و «هدف حکیم» نیز از کتاب‌های بنیادین آن به شمار می‌آید.</p>
             <a class="card__link" href="resources.html">کتاب‌ها و منابع</a>
           </article>
-          <article class="card">
+          <article class="card" data-reveal>
             <span class="card__icon" aria-hidden="true">✦</span>
             <h3>جامعه فارسی‌زبان</h3>
             <p>گروه تلگرام فارسی‌زبان این دعوت، محل پرسش، گفت‌وگو و دریافت نسخه‌های کتاب‌ها و خوانش‌های صوتی است.</p>
@@ -126,8 +131,125 @@
       </div>
     </section>
 
+    <!-- Three recognition criteria -->
+    <section class="section" aria-labelledby="criteria-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="criteria-title">سه معیار شناخت حجت</h2>
+          <p>
+            بر اساس مانیفست مهدی، سه معیار برای شناخت رهبر برگزیدهٔ الهی بیان شده است؛
+            چارچوبی که در سراسر تاریخ این دعوت — از آدم تا امروز — یکسان روایت می‌شود.
+          </p>
+        </div>
+        <div class="card-grid card-grid--3">
+          <article class="card card--gold" data-reveal>
+            <span class="card__icon" aria-hidden="true">✦</span>
+            <h3>وصیت</h3>
+            <p>نام رهبر برگزیده، پیش از ظهورش در وصیت پیشینیان آمده است؛ از وصیت آدم تا وصیت پیامبر اسلام با دوازده امام و دوازده مهدی.</p>
+            <a class="card__link" href="teachings.html#criteria">مطالعه بیشتر</a>
+          </article>
+          <article class="card card--gold" data-reveal>
+            <span class="card__icon" aria-hidden="true">✧</span>
+            <h3>علم</h3>
+            <p>در این منبع، حجت خدا دانشی معنوی و الهی دارد، نه دانشی صرفاً دنیوی؛ دانشی که او را برای داوری عادلانه میان مردم یاری می‌کند.</p>
+            <a class="card__link" href="teachings.html#criteria">مطالعه بیشتر</a>
+          </article>
+          <article class="card card--gold" data-reveal>
+            <span class="card__icon" aria-hidden="true">✦</span>
+            <h3>پرچم</h3>
+            <p>پرچم حجت خدا شعار «بیعت از آنِ خداست» را دارد: فراخوان به فرمانروایی خدا، نه گزینش رهبر به دست مردم.</p>
+            <a class="card__link" href="teachings.html#criteria">مطالعه بیشتر</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seven covenants preview -->
+    <section class="section section--alt" aria-labelledby="covenants-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="covenants-title">عهدهای هفت‌گانه</h2>
+          <p>
+            در روایت این دعوت، تاریخ هدایت الهی در قالب هفت عهد روایت می‌شود؛ از عهد نخست با آدم تا
+            عهد هفتم — <a href="mahdi.html">مهدی و عهد هفتم</a>.
+          </p>
+        </div>
+        <ul class="covenant-strip">
+          <li><a href="teachings.html#covenant-1"><span class="chip-num" aria-hidden="true">۱</span>آدم</a></li>
+          <li><a href="teachings.html#covenant-2"><span class="chip-num" aria-hidden="true">۲</span>نوح</a></li>
+          <li><a href="teachings.html#covenant-3"><span class="chip-num" aria-hidden="true">۳</span>ابراهیم</a></li>
+          <li><a href="teachings.html#covenant-4"><span class="chip-num" aria-hidden="true">۴</span>موسی</a></li>
+          <li><a href="teachings.html#covenant-5"><span class="chip-num" aria-hidden="true">۵</span>عیسی</a></li>
+          <li><a href="teachings.html#covenant-6"><span class="chip-num" aria-hidden="true">۶</span>محمد</a></li>
+          <li><a href="teachings.html#covenant-7"><span class="chip-num" aria-hidden="true">۷</span>احمد الحسن</a></li>
+        </ul>
+        <p class="text-center" style="margin-top: var(--space-4);">
+          <a class="card__link" href="teachings.html">شرح عهدها و سه معیار شناخت</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Books -->
+    <section class="section" aria-labelledby="books-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="books-title">کتاب‌ها را همین‌جا دریافت کنید</h2>
+          <p>دو منبع اصلی این دعوت، به‌همراه نسخه‌های صوتی، از طریق دانلود مستقیم یا تلگرام در دسترس شماست.</p>
+        </div>
+        <div class="card-grid card-grid--2">
+          <article class="card resource-card" data-reveal>
+            <span class="badge">کتاب</span>
+            <h3>مانیفست مهدی</h3>
+            <p>مرجع اصلی معرفی دین صلح و نور احمدی؛ متن پایه این دعوت برای آشنایی جدی با آموزه‌های آن.</p>
+            <div class="btn-row">
+              <a class="btn btn--primary" href="https://theahmadireligion.org/download/42616/?tmstv=1765124110" target="_blank" rel="noopener" aria-label="دانلود مستقیم مانیفست مهدی — باز شدن در وب‌سایت رسمی">دانلود مستقیم</a>
+              <a class="btn btn--gold" href="https://t.me/theahmadireligion_farsi_channel/7125?single" target="_blank" rel="noopener" aria-label="دانلود مانیفست مهدی در تلگرام — باز شدن در تلگرام">دریافت از تلگرام ↗</a>
+            </div>
+          </article>
+          <article class="card resource-card" data-reveal>
+            <span class="badge">کتاب</span>
+            <h3>هدف حکیم</h3>
+            <p>کتاب بنیادین این دعوت که در منابع رسمی به عبدالله هاشم (ابا الصادق) نسبت داده شده است؛ همراه با خوانش صوتی در تلگرام.</p>
+            <div class="btn-row">
+              <a class="btn btn--primary" href="https://theahmadireligion.org/download/42889/?tmstv=1765481076" target="_blank" rel="noopener" aria-label="دانلود مستقیم هدف حکیم — باز شدن در وب‌سایت رسمی">دانلود مستقیم</a>
+              <a class="btn btn--gold" href="https://t.me/theahmadireligion_farsi_channel/7121?single" target="_blank" rel="noopener" aria-label="هدف حکیم — دانلود کتاب و خوانش صوتی در تلگرام">دریافت از تلگرام و خوانش صوتی ↗</a>
+            </div>
+          </article>
+        </div>
+        <p class="text-center" style="margin-top: var(--space-4);">
+          <a class="card__link" href="resources.html">فهرست کامل منابع و نسخه‌های صوتی</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ preview -->
+    <section class="section section--alt" aria-labelledby="faq-preview-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="faq-preview-title">پرسش‌های متداول</h2>
+        </div>
+        <div class="faq-list" data-accordion>
+          <details>
+            <summary>دین صلح و نور احمدی چیست؟</summary>
+            <p>دعوتی جهانی است که پیروان آن آن را ادامه‌ی زنجیره‌ی عهدهای الهی در عصر حاضر می‌دانند؛ معرفی آن در این وب‌سایت بر پایه منابع رسمی خودِ این دعوت است.</p>
+          </details>
+          <details>
+            <summary>سه معیار شناخت حجت چیست؟</summary>
+            <p>در مانیفست مهدی، سه معیار برای شناخت رهبر برگزیدهٔ الهی بیان شده است: «وصیت»، «علم» و «پرچم».</p>
+          </details>
+          <details>
+            <summary>چگونه با جامعه فارسی‌زبان ارتباط برقرار کنم؟</summary>
+            <p>از طریق <a href="https://t.me/theahmadireligionfarsi" target="_blank" rel="noopener" aria-label="گروه تلگرام دین صلح و نور احمدی — باز شدن در تلگرام">گروه تلگرام دین صلح و نور احمدی</a> می‌توانید پرسش کنید و در گفت‌وگوها شرکت کنید.</p>
+          </details>
+        </div>
+        <p class="text-center" style="margin-top: var(--space-4);">
+          <a class="btn btn--ghost" href="faq.html">همه پرسش‌ها</a>
+        </p>
+      </div>
+    </section>
+
     <!-- Reading journey -->
-    <section class="section section--alt" aria-labelledby="journey-title">
+    <section class="section" aria-labelledby="journey-title">
       <div class="container">
         <div class="section-head">
           <h2 id="journey-title">مسیر مطالعه</h2>
@@ -151,65 +273,6 @@
             <p>پرسش‌های متداول را مرور کنید و در گروه تلگرام فارسی‌زبان با جامعه این دعوت در ارتباط باشید.</p>
           </li>
         </ol>
-      </div>
-    </section>
-
-    <!-- Books -->
-    <section class="section" aria-labelledby="books-title">
-      <div class="container">
-        <div class="section-head">
-          <h2 id="books-title">کتاب‌ها را همین‌جا دریافت کنید</h2>
-          <p>دو منبع اصلی این دعوت، به‌همراه نسخه‌های صوتی، از طریق دانلود مستقیم یا تلگرام در دسترس شماست.</p>
-        </div>
-        <div class="card-grid card-grid--2">
-          <article class="card resource-card">
-            <span class="badge">کتاب</span>
-            <h3>مانیفست مهدی</h3>
-            <p>مرجع اصلی معرفی دین صلح و نور احمدی؛ متن پایه این دعوت برای آشنایی جدی با آموزه‌های آن.</p>
-            <div class="btn-row">
-              <a class="btn btn--primary" href="https://theahmadireligion.org/download/42616/?tmstv=1765124110" target="_blank" rel="noopener" aria-label="دانلود مستقیم مانیفست مهدی — باز شدن در وب‌سایت رسمی">دانلود مستقیم</a>
-              <a class="btn btn--gold" href="https://t.me/theahmadireligion_farsi_channel/7125?single" target="_blank" rel="noopener" aria-label="دانلود مانیفست مهدی در تلگرام — باز شدن در تلگرام">دریافت از تلگرام ↗</a>
-            </div>
-          </article>
-          <article class="card resource-card">
-            <span class="badge">کتاب</span>
-            <h3>هدف حکیم</h3>
-            <p>کتاب بنیادین این دعوت که در منابع رسمی به عبدالله هاشم (ابا الصادق) نسبت داده شده است؛ همراه با خوانش صوتی در تلگرام.</p>
-            <div class="btn-row">
-              <a class="btn btn--primary" href="https://theahmadireligion.org/download/42889/?tmstv=1765481076" target="_blank" rel="noopener" aria-label="دانلود مستقیم هدف حکیم — باز شدن در وب‌سایت رسمی">دانلود مستقیم</a>
-              <a class="btn btn--gold" href="https://t.me/theahmadireligion_farsi_channel/7121?single" target="_blank" rel="noopener" aria-label="هدف حکیم — دانلود کتاب و خوانش صوتی در تلگرام">دریافت از تلگرام و خوانش صوتی ↗</a>
-            </div>
-          </article>
-        </div>
-        <p class="text-center" style="margin-top: var(--space-4);">
-          <a class="card__link" href="resources.html">فهرست کامل منابع و نسخه‌های صوتی</a>
-        </p>
-      </div>
-    </section>
-
-    <!-- FAQ preview -->
-    <section class="section section--alt" aria-labelledby="faq-preview-title">
-      <div class="container">
-        <div class="section-head">
-          <h2 id="faq-preview-title">پرسش‌های متداول</h2>
-        </div>
-        <div class="faq-list">
-          <details>
-            <summary>دین صلح و نور احمدی چیست؟</summary>
-            <p>دعوتی جهانی است که پیروان آن آن را ادامه‌ی زنجیره‌ی عهدهای الهی در عصر حاضر می‌دانند؛ معرفی آن در این وب‌سایت بر پایه منابع رسمی خودِ این دعوت است.</p>
-          </details>
-          <details>
-            <summary>مانیفست مهدی چیست؟</summary>
-            <p>متن پایه و مرجع اصلی معرفی این دعوت که در آن آموزه‌های بنیادین و ادعاهای محوری این دین بیان شده است.</p>
-          </details>
-          <details>
-            <summary>چگونه با جامعه فارسی‌زبان ارتباط برقرار کنم؟</summary>
-            <p>از طریق <a href="https://t.me/theahmadireligionfarsi" target="_blank" rel="noopener" aria-label="گروه تلگرام دین صلح و نور احمدی — باز شدن در تلگرام">گروه تلگرام دین صلح و نور احمدی</a> می‌توانید پرسش کنید و در گفت‌وگوها شرکت کنید.</p>
-          </details>
-        </div>
-        <p class="text-center" style="margin-top: var(--space-4);">
-          <a class="btn btn--ghost" href="faq.html">همه پرسش‌ها</a>
-        </p>
       </div>
     </section>
 

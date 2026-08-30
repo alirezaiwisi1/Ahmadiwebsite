@@ -2,6 +2,7 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
+  <script>(function(){try{var t=localStorage.getItem("ahmadi-theme");if(!t){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}document.documentElement.setAttribute("data-theme",t);document.documentElement.classList.add("js");}catch(e){document.documentElement.classList.add("js");}})();</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>آشنایی با دین | دین صلح و نور احمدی</title>
   <meta name="description" content="معرفی دین صلح و نور احمدی بر پایه منابع رسمی این دعوت؛ مبانی دعوت، عهدهای هفت‌گانه، عهد هفتم، شخصیت‌های محوری و مسیر مطالعه.">
@@ -60,10 +61,14 @@
           <li><a class="nav-tg" href="https://t.me/theahmadireligionfarsi" target="_blank" rel="noopener" aria-label="گروه تلگرام دین صلح و نور احمدی — باز شدن در تلگرام">گروه تلگرام <span aria-hidden="true">↗</span></a></li>
         </ul>
       </nav>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="تغییر پوسته روشن و تاریک" aria-pressed="false">
+        <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">☾</span>
+        <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☀</span>
+      </button>
     </div>
   </header>
 
-  <main id="main-content">
+  <main id="main-content" tabindex="-1">
     <nav class="breadcrumb container" aria-label="مسیر صفحه">
       <ol>
         <li><a href="index.html">خانه</a></li>
@@ -117,11 +122,11 @@
             <p>بر اساس آموزه‌های این دین، خداوند در طول تاریخ با انسان هفت عهد بسته است؛ از عهد نخست با آدم تا عهد هفتم با احمد الحسن.</p>
             <a class="card__link" href="teachings.html">عهدهای هفت‌گانه</a>
           </article>
-          <article class="card">
+          <article class="card card--gold" data-reveal>
             <span class="card__icon" aria-hidden="true">✧</span>
-            <h3>هدایت و دانش الهی</h3>
-            <p>در منابع این دعوت، هدایت انسان از سوی خدا و دسترسی به دانش الهی از راه پیامبران و حاملان عهد، هسته اصلی راه نجات دانسته می‌شود.</p>
-            <a class="card__link" href="manifesto.html">مانیفست مهدی</a>
+            <h3>سه معیار شناخت حجت</h3>
+            <p>در مانیفست مهدی، سه معیار برای شناخت رهبر برگزیدهٔ الهی بیان شده است: «وصیت»، «علم» و «پرچم».</p>
+            <a class="card__link" href="teachings.html#criteria">سه معیار شناخت</a>
           </article>
           <article class="card">
             <span class="card__icon" aria-hidden="true">✦</span>

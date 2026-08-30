@@ -2,20 +2,21 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
+  <script>(function(){try{var t=localStorage.getItem("ahmadi-theme");if(!t){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}document.documentElement.setAttribute("data-theme",t);document.documentElement.classList.add("js");}catch(e){document.documentElement.classList.add("js");}})();</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>آموزه‌ها و عهدهای هفت‌گانه | دین صلح و نور احمدی</title>
-  <meta name="description" content="آموزه‌های دین صلح و نور احمدی بر پایه منابع رسمی؛ عهدهای هفت‌گانه خدا با انسان از آدم تا احمد الحسن و شرح مختصر هر عهد.">
+  <meta name="description" content="آموزه‌های دین صلح و نور احمدی بر پایه مانیفست مهدی؛ سه معیار شناخت حجت — وصیت، علم، پرچم — و شرح عهدهای هفت‌گانه خدا با انسان از آدم تا احمد الحسن.">
   <link rel="canonical" href="https://alirezaiwisi1.github.io/Ahmadiwebsite/teachings.html">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fa_IR">
   <meta property="og:site_name" content="دین صلح و نور احمدی">
   <meta property="og:title" content="آموزه‌ها و عهدهای هفت‌گانه | دین صلح و نور احمدی">
-  <meta property="og:description" content="عهدهای هفت‌گانه خدا با انسان بر پایه منابع دین صلح و نور احمدی؛ از آدم تا احمد الحسن.">
+  <meta property="og:description" content="سه معیار شناخت حجت — وصیت، علم، پرچم — و عهدهای هفت‌گانه خدا با انسان بر پایه منابع دین صلح و نور احمدی.">
   <meta property="og:url" content="https://alirezaiwisi1.github.io/Ahmadiwebsite/teachings.html">
   <meta property="og:image" content="https://alirezaiwisi1.github.io/Ahmadiwebsite/assets/images/logo.webp">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="آموزه‌ها و عهدهای هفت‌گانه | دین صلح و نور احمدی">
-  <meta name="twitter:description" content="عهدهای هفت‌گانه خدا با انسان بر پایه منابع دین صلح و نور احمدی؛ از آدم تا احمد الحسن.">
+  <meta name="twitter:description" content="سه معیار شناخت حجت — وصیت، علم، پرچم — و عهدهای هفت‌گانه خدا با انسان بر پایه منابع دین صلح و نور احمدی.">
   <meta name="twitter:image" content="https://alirezaiwisi1.github.io/Ahmadiwebsite/assets/images/logo.webp">
   <meta name="theme-color" content="#0b1020">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -60,10 +61,15 @@
           <li><a class="nav-tg" href="https://t.me/theahmadireligionfarsi" target="_blank" rel="noopener" aria-label="گروه تلگرام دین صلح و نور احمدی — باز شدن در تلگرام">گروه تلگرام <span aria-hidden="true">↗</span></a></li>
         </ul>
       </nav>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="تغییر پوسته روشن و تاریک" aria-pressed="false">
+        <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">☾</span>
+        <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☀</span>
+      </button>
     </div>
   </header>
 
-  <main id="main-content">
+  <main id="main-content" tabindex="-1">
+    <div class="reading-progress" aria-hidden="true"><span></span></div>
     <nav class="breadcrumb container" aria-label="مسیر صفحه">
       <ol>
         <li><a href="index.html">خانه</a></li>
@@ -91,81 +97,213 @@
       </div>
     </section>
 
-    <section class="section" aria-labelledby="covenants-title">
+    <section class="section" aria-labelledby="criteria-title">
       <div class="container">
-        <h2 id="covenants-title" class="text-center">هفت عهد</h2>
-        <div class="card-grid card-grid--3" style="margin-top: var(--space-5);">
-          <article class="card">
-            <span class="covenant-num" aria-hidden="true">۱</span>
-            <h3>عهد اول با آدم</h3>
-            <p>
-              بر پایه منابع این دعوت، عهد نخست با آدم بسته شد؛ عهدی که سرآغاز راه هدایت الهی برای انسان
-              به شمار می‌آید و مفهوم پیمان میان خدا و انسان در آموزه‌های این دین از همین‌جا آغاز می‌شود.
-            </p>
-            <a class="card__link" href="manifesto.html">مطالعه بیشتر در مانیفست مهدی</a>
-          </article>
-          <article class="card">
-            <span class="covenant-num" aria-hidden="true">۲</span>
-            <h3>عهد دوم با نوح</h3>
-            <p>
-              در منابع این دعوت، نوح به‌عنوان حامل عهد دوم معرفی شده است؛ عهدی که ادامه راه هدایت الهی
-              در نسل انسان دانسته می‌شود.
-            </p>
-            <a class="card__link" href="manifesto.html">مطالعه بیشتر در مانیفست مهدی</a>
-          </article>
-          <article class="card">
-            <span class="covenant-num" aria-hidden="true">۳</span>
-            <h3>عهد سوم با ابراهیم</h3>
-            <p>
-              بر اساس آموزه‌های این دین، عهد سوم با ابراهیم بسته شد؛ پیمانی که در روایت این دعوت با
-              ایمان و پایبندی به عهد الهی گره خورده است.
-            </p>
-            <a class="card__link" href="manifesto.html">مطالعه بیشتر در مانیفست مهدی</a>
-          </article>
-          <article class="card">
-            <span class="covenant-num" aria-hidden="true">۴</span>
-            <h3>عهد چهارم با موسی</h3>
-            <p>
-              در منابع این دعوت آمده است که عهد چهارم با موسی بسته شد؛ عهدی که در روایت این دعوت با
-              رسالت او و هدایت قومش پیوند دارد.
-            </p>
-            <a class="card__link" href="manifesto.html">مطالعه بیشتر در مانیفست مهدی</a>
-          </article>
-          <article class="card">
-            <span class="covenant-num" aria-hidden="true">۵</span>
-            <h3>عهد پنجم با عیسی</h3>
-            <p>
-              بر پایه آموزه‌های این دین، عهد پنجم با عیسی بسته شد؛ حلقه‌ای از زنجیره هدایت الهی که
-              پیوند میان پیامبران پیشین و وعده‌های پسین دانسته می‌شود.
-            </p>
-            <a class="card__link" href="manifesto.html">مطالعه بیشتر در مانیفست مهدی</a>
-          </article>
-          <article class="card">
-            <span class="covenant-num" aria-hidden="true">۶</span>
-            <h3>عهد ششم با محمد</h3>
-            <p>
-              بر اساس آموزه‌های این دین، عهد ششم با محمد، پیامبر اسلام، بسته شد؛ عهدی که در روایت این
-              دعوت با وعده ظهور مهدی در پایان روزها پیوند خورده است.
-            </p>
-            <a class="card__link" href="mahdi.html">مهدی و عهد هفتم</a>
-          </article>
-        </div>
-
-        <div class="card" style="margin-top: var(--space-4); border-top-color: var(--color-gold);">
-          <span class="covenant-num" aria-hidden="true">۷</span>
-          <h3>عهد هفتم با احمد الحسن</h3>
+        <div class="section-head">
+          <h2 id="criteria-title">سه معیار شناخت حجت</h2>
           <p>
-            در منابع این دعوت، احمد الحسن به‌عنوان حامل عهد هفتم و مهدی موعود معرفی شده است. این باور
-            هسته مرکزی آموزه‌های دین صلح و نور احمدی است و شرح آن — به‌همراه پیوند آن با عهدهای پیشین —
-            در «مانیفست مهدی» آمده است. در منابع این دعوت، ادامه این راه در عصر حاضر با عبدالله هاشم
-            (ابا الصادق) پیوند خورده است.
+            بر اساس مانیفست مهدی، رهبر برگزیدهٔ الهی با سه معیار شناخته می‌شود؛ معیارهایی که در سراسر
+            تاریخ این دعوت — از آدم تا امروز — یکسان روایت می‌شود.
           </p>
-          <a class="card__link" href="mahdi.html">نقش مهدی در آموزه‌های این دین</a>
+        </div>
+        <div class="card-grid card-grid--3">
+          <article class="card card--gold" data-reveal>
+            <span class="card__icon" aria-hidden="true">✦</span>
+            <h3>وصیت</h3>
+            <p>
+              نخستین معیار در این منبع، «وصیت» است: نام هر رهبر برگزیده پیش از ظهورش در وصیت پیشینیان
+              آمده است. بر پایه روایت‌های نقل‌شده در کتاب، آدم نام جانشینان را تا روزگار نوح در وصیتش
+              نوشت؛ موسی یوشع را برگزید و به عیسی بشارت داد؛ عیسی شمعون پطرس را در وصیت خود برگزید و به
+              محمد بشارت داد؛ و پیامبر اسلام در وصیت خویش دوازده امام و پس از آنان دوازده مهدی را نام برد.
+            </p>
+            <span class="source-ref">منبع: مانیفست مهدی، فصل نخست — با ارجاع به قرآن، تورات، انجیل، صحیح بخاری و غیبت شیخ طوسی.</span>
+          </article>
+          <article class="card card--gold" data-reveal>
+            <span class="card__icon" aria-hidden="true">✧</span>
+            <h3>علم</h3>
+            <p>
+              معیار دوم در این منبع، «علم» است: دانشی که خدا به حجت خود می‌دهد؛ دانشی معنوی و فراتر از
+              علوم رایج دنیا. بر پایه روایت‌های کتاب، حامل پیمان با این دانش دل‌ها را می‌شناسد و میان
+              مردم به عدالت داوری می‌کند و — چنان‌که کتاب با اشاره به «فیلسوف‌شاه» افلاطون می‌گوید —
+              هر کس را در جایگاه شایسته‌اش می‌نهد.
+            </p>
+            <span class="source-ref">منبع: مانیفست مهدی، فصل نخست — با ارجاع به قرآن، بحارالانوار، میزان الحکمة و الکافی.</span>
+          </article>
+          <article class="card card--gold" data-reveal>
+            <span class="card__icon" aria-hidden="true">✦</span>
+            <h3>پرچم</h3>
+            <p>
+              سومین معیار در این منبع، «پرچم» است. بر پایه کتاب، پرچم حجت خدا شعار «بیعت از آنِ خداست»
+              را بر خود دارد؛ فراخوانی به فرمانروایی خدا و این باور که تنها خداست که رهبر را برمی‌گزیند.
+              در روایت منبع، پرچم محمد و علی به دست قائم می‌رسد و پرچم او چنین نوشته‌ای دارد.
+            </p>
+            <span class="source-ref">منبع: مانیفست مهدی، فصل نخست — با ارجاع به قرآن و روایات اهل‌بیت.</span>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section section--alt" aria-labelledby="themes-title">
+    <section class="section section--alt" aria-labelledby="covenants-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="covenants-title">عهدهای هفت‌گانه</h2>
+          <p>
+            بر اساس مانیفست مهدی، تاریخ هدایت الهی در قالب هفت عهد روایت می‌شود؛ هر عهد با شریعت و
+            قانونی نو گشوده شده و نام جانشینان در وصیت حامل پیشین نوشته شده است. برای خواندن شرح هر
+            عهد، آن را باز کنید.
+          </p>
+        </div>
+        <ol class="covenant-list" data-accordion>
+          <li id="covenant-1" data-reveal>
+            <details class="covenant-item">
+              <summary>
+                <span class="covenant-num" aria-hidden="true">۱</span>
+                عهد نخست با آدم
+                <span class="covenant-item__era">عهد اول</span>
+              </summary>
+              <div class="covenant-item__body">
+                <p>
+                  بر اساس این منبع، خداوند آدم را «خلیفه‌ای در زمین» قرار داد (قرآن، بقره ۳۰) و فرشتگان
+                  بر او سجده کردند. خداوند نام همه چیز را به آدم آموخت (قرآن، بقره ۳۱–۳۳؛ تورات،
+                  پیدایش ۲:۲۰) و از همین‌جا نخستین شریعت و نخستین پیمان میان خدا و انسان آغاز شد.
+                </p>
+                <p>
+                  در روایت‌های نقل‌شده در کتاب، آدم در وصیت خود نام جانشینان را تا روزگار نوح نوشت؛
+                  شیث این دانش را در پنهانی نگاه داشت و نام‌ها هر سال در روزی معین گشوده می‌شد. از همین
+                  سنت، مفهوم «تقیه» در این روایت ریشه می‌گیرد.
+                </p>
+                <span class="source-ref">منبع: مانیفست مهدی، فصل‌های یکم و دوم.</span>
+              </div>
+            </details>
+          </li>
+          <li id="covenant-2" data-reveal>
+            <details class="covenant-item">
+              <summary>
+                <span class="covenant-num" aria-hidden="true">۲</span>
+                عهد دوم با نوح
+                <span class="covenant-item__era">عهد دوم</span>
+              </summary>
+              <div class="covenant-item__body">
+                <p>
+                  بر پایه این منبع، پس از آنکه مردم عهد نخست را شکستند و عذاب طوفان فرود آمد، نوح عهد
+                  دوم را بنیان نهاد؛ با شریعت و قانونی نو. او پیش از درگذشت، وصیتی بر جای گذاشت که نام
+                  جانشینان را تا ابراهیم در بر می‌گرفت. در روایت‌های نقل‌شده در منبع، نوح ۹۵۰ سال میان
+                  قومش دعوت کرد.
+                </p>
+                <span class="source-ref">منبع: مانیفست مهدی، فصل دوم.</span>
+              </div>
+            </details>
+          </li>
+          <li id="covenant-3" data-reveal>
+            <details class="covenant-item">
+              <summary>
+                <span class="covenant-num" aria-hidden="true">۳</span>
+                عهد سوم با ابراهیم
+                <span class="covenant-item__era">عهد سوم</span>
+              </summary>
+              <div class="covenant-item__body">
+                <p>
+                  در این منبع، ابراهیم عهد سوم را با شریعت و قانونی نو گشود و جانشینان خود را تا موسی در
+                  وصیتش نام برد. بر پایه روایت منبع، خداوند سرزمینی برای فرمانروایی به او عطا کرد.
+                </p>
+                <span class="source-ref">منبع: مانیفست مهدی، فصل‌های یکم و دوم.</span>
+              </div>
+            </details>
+          </li>
+          <li id="covenant-4" data-reveal>
+            <details class="covenant-item">
+              <summary>
+                <span class="covenant-num" aria-hidden="true">۴</span>
+                عهد چهارم با موسی
+                <span class="covenant-item__era">عهد چهارم</span>
+              </summary>
+              <div class="covenant-item__body">
+                <p>
+                  بر اساس این منبع، موسی قومش را از سلطه فرعون رهانید و به سرزمین موعود رساند و عهد
+                  چهارم را بنیان نهاد. او در وصیت پایانی خود یوشع بن نون را برگزید و به آمدن عیسی بشارت
+                  داد. در روایتی که منبع نقل می‌کند، حاملان پیمان «به حکم خدا و حکم داوود» داوری
+                  می‌کنند و آنچه را از توانشان بیرون باشد، وحی روشن می‌سازد.
+                </p>
+                <span class="source-ref">منبع: مانیفست مهدی، فصل‌های یکم و دوم — با ارجاع به الکافی.</span>
+              </div>
+            </details>
+          </li>
+          <li id="covenant-5" data-reveal>
+            <details class="covenant-item">
+              <summary>
+                <span class="covenant-num" aria-hidden="true">۵</span>
+                عهد پنجم با عیسی
+                <span class="covenant-item__era">عهد پنجم</span>
+              </summary>
+              <div class="covenant-item__body">
+                <p>
+                  بر پایه این منبع، عیسی عهد پنجم را با شریعتی نو آورد و شمعون پطرس را در وصیت خود
+                  برگزید و «کلیدهای پادشاهی آسمان‌ها» را به او داد (انجیل متی ۱۶:۱۹) و جانشینان را تا
+                  محمد نامید. او نیز به سنت پیشینیان، به پیامبری پس از خود بشارت داد که نامش «احمد» است
+                  (قرآن، صف ۶). این منبع همچنین گزینشِ مردم به‌جای عیسی و به نفع بارابا را نمونه‌ای از
+                  ناتوانی مردم در انتخاب رهبر شمرده است.
+                </p>
+                <span class="source-ref">منبع: مانیفست مهدی، فصل‌های یکم و دوم.</span>
+              </div>
+            </details>
+          </li>
+          <li id="covenant-6" data-reveal>
+            <details class="covenant-item">
+              <summary>
+                <span class="covenant-num" aria-hidden="true">۶</span>
+                عهد ششم با محمد
+                <span class="covenant-item__era">عهد ششم</span>
+              </summary>
+              <div class="covenant-item__body">
+                <p>
+                  در این منبع، محمد پیامبر اسلام عهد ششم را با شریعت و قوانین نو آورد. بر پایه
+                  روایت‌های نقل‌شده (صحیح بخاری ۵۶۶۹؛ غیبت شیخ طوسی)، پیامبر در واپسین روزهای زندگی
+                  خواستار نوشته‌ای شد که امت پس از آن گمراه نشود؛ در این وصیت، دوازده امام — از
+                  امیرالمؤمنین علی تا امام مهدی، محمد بن حسن عسکری — و پس از آنان دوازده مهدی نام برده
+                  می‌شود و نام مهدی نخست سه نام است: عبدالله، احمد و المهدی.
+                </p>
+                <p>
+                  این منبع می‌گوید امت، عهد ششم را با کشتار خاندان پیامبر و کنار نهادن رهبران منصوص او
+                  شکست.
+                </p>
+                <span class="source-ref">منبع: مانیفست مهدی، فصل دوم.</span>
+              </div>
+            </details>
+          </li>
+          <li id="covenant-7" data-reveal>
+            <details class="covenant-item" open>
+              <summary>
+                <span class="covenant-num" aria-hidden="true">۷</span>
+                عهد هفتم با احمد الحسن
+                <span class="covenant-item__era">عهد هفتم</span>
+              </summary>
+              <div class="covenant-item__body">
+                <p>
+                  بر اساس این منبع، مهدی با عهد هفتم و «کتابی نو و امری نو» برانگیخته می‌شود؛ در
+                  روزگاری که به روایت کتاب، دین گم شده و بدترین آفریدگان، عالمانِ ستمگر زمانه‌اند. بر
+                  پایه روایت منبع، پرچم قائم شعار «بیعت از آنِ خداست» را دارد.
+                </p>
+                <p>
+                  نویسنده کتاب، عبدالله هاشم، مدعی است نام «عبدالله» در وصیت پیامبر تنها بر او منطبق
+                  است و نام «احمد» بر احمد الحسن — که در این منبع با عنوان «یمانی» نیز یاد شده است؛ هر
+                  دو به برخورداری از دانش الهی و دعوت به فرمانروایی خدا اشاره می‌کنند. در منابع این
+                  دعوت، ادامه این راه در عصر حاضر با عبدالله هاشم (ابا الصادق) پیوند خورده است.
+                </p>
+                <span class="source-ref">منبع: مانیفست مهدی، فصل‌های یکم، دوم و سوم — با ارجاع به الکافی و کتاب الغیبة نعمانی.</span>
+              </div>
+            </details>
+          </li>
+        </ol>
+        <div class="notice" style="margin-top: var(--space-5);">
+          <p>
+            شرح کامل هر یک از عهدها در خودِ «مانیفست مهدی» آمده است. آنچه در این صفحه می‌خوانید
+            چکیده‌ای منبع‌محور از چارچوب آموزه‌های این دین است و جایگزین مطالعه متن اصلی نیست.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="themes-title">
       <div class="container">
         <div class="section-head">
           <h2 id="themes-title">موضوع‌های دیگر آموزه‌ها</h2>

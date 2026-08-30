@@ -2,20 +2,21 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
+  <script>(function(){try{var t=localStorage.getItem("ahmadi-theme");if(!t){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}document.documentElement.setAttribute("data-theme",t);document.documentElement.classList.add("js");}catch(e){document.documentElement.classList.add("js");}})();</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>مهدی و عهد هفتم | دین صلح و نور احمدی</title>
-  <meta name="description" content="نقش مهدی در آموزه‌های دین صلح و نور احمدی؛ معرفی احمد الحسن و عبدالله هاشم (ابا الصادق) بر پایه منابع رسمی این دعوت و مانیفست مهدی.">
+  <meta name="description" content="مهدی و عهد هفتم در آموزه‌های دین صلح و نور احمدی بر پایه مانیفست مهدی؛ وصیت پیامبر با دوازده امام و دوازده مهدی، سه معیار شناخت، پرچم «بیعت از آنِ خداست» و دعوت به گردهمایی.">
   <link rel="canonical" href="https://alirezaiwisi1.github.io/Ahmadiwebsite/mahdi.html">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fa_IR">
   <meta property="og:site_name" content="دین صلح و نور احمدی">
   <meta property="og:title" content="مهدی و عهد هفتم | دین صلح و نور احمدی">
-  <meta property="og:description" content="نقش مهدی در آموزه‌های دین صلح و نور احمدی بر پایه منابع رسمی این دعوت و مانیفست مهدی.">
+  <meta property="og:description" content="مهدی و عهد هفتم در آموزه‌های دین صلح و نور احمدی بر پایه منابع رسمی این دعوت و مانیفست مهدی.">
   <meta property="og:url" content="https://alirezaiwisi1.github.io/Ahmadiwebsite/mahdi.html">
   <meta property="og:image" content="https://alirezaiwisi1.github.io/Ahmadiwebsite/assets/images/logo.webp">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="مهدی و عهد هفتم | دین صلح و نور احمدی">
-  <meta name="twitter:description" content="نقش مهدی در آموزه‌های دین صلح و نور احمدی بر پایه منابع رسمی این دعوت و مانیفست مهدی.">
+  <meta name="twitter:description" content="مهدی و عهد هفتم در آموزه‌های دین صلح و نور احمدی بر پایه منابع رسمی این دعوت و مانیفست مهدی.">
   <meta name="twitter:image" content="https://alirezaiwisi1.github.io/Ahmadiwebsite/assets/images/logo.webp">
   <meta name="theme-color" content="#0b1020">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -60,10 +61,15 @@
           <li><a class="nav-tg" href="https://t.me/theahmadireligionfarsi" target="_blank" rel="noopener" aria-label="گروه تلگرام دین صلح و نور احمدی — باز شدن در تلگرام">گروه تلگرام <span aria-hidden="true">↗</span></a></li>
         </ul>
       </nav>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="تغییر پوسته روشن و تاریک" aria-pressed="false">
+        <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">☾</span>
+        <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☀</span>
+      </button>
     </div>
   </header>
 
-  <main id="main-content">
+  <main id="main-content" tabindex="-1">
+    <div class="reading-progress" aria-hidden="true"><span></span></div>
     <nav class="breadcrumb container" aria-label="مسیر صفحه">
       <ol>
         <li><a href="index.html">خانه</a></li>
@@ -94,7 +100,7 @@
     <section class="section" aria-labelledby="mahdi-title">
       <div class="container">
         <div class="card-grid card-grid--2">
-          <article class="card">
+          <article class="card" data-reveal>
             <h2 id="mahdi-title">مهدی در آموزه‌های این دین</h2>
             <p>
               بر اساس آموزه‌های دین صلح و نور احمدی، «مهدی» هدایتگر موعودی است که خداوند در پایان روزها
@@ -103,7 +109,7 @@
               خورده است.
             </p>
           </article>
-          <article class="card">
+          <article class="card" data-reveal>
             <h2>وعده ظهور</h2>
             <p>
               در منابع این دعوت، ظهور مهدی بشارتی دانسته می‌شود که پیامبران پیشین نیز به آن اشاره کرده‌اند
@@ -114,23 +120,44 @@
       </div>
     </section>
 
-    <section class="section section--alt" aria-labelledby="figures-title">
+    <section class="section section--alt" aria-labelledby="will-title">
       <div class="container">
         <div class="section-head">
-          <h2 id="figures-title">شخصیت‌های محوری دعوت</h2>
-          <p>همان‌گونه که در منابع رسمی این دعوت معرفی شده‌اند:</p>
+          <h2 id="will-title">وصیت پیامبر؛ دوازده امام و دوازده مهدی</h2>
+          <p>رابطه مهدی با «وصیت» — نخستین معیار شناخت حجت — در هسته مرکزی روایت این منبع است.</p>
         </div>
-        <div class="card-grid card-grid--2">
-          <article class="card">
+        <div class="measure" style="margin-inline: auto;">
+          <p>
+            بر اساس مانیفست مهدی، پیامبر اسلام در واپسین روزهای زندگی خود خواستار نوشته‌ای شد که امت پس
+            از آن گمراه نشود (صحیح بخاری ۵۶۶۹) و در شب درگذشت، وصیت خود را املا کرد. در این وصیت —
+            چنان‌که کتاب با ارجاع به غیبت شیخ طوسی نقل می‌کند — دوازده امام نام برده شده است؛ از
+            امیرالمؤمنین علی تا امام مهدی، محمد بن حسن عسکری، و پس از آنان دوازده مهدی.
+          </p>
+          <figure class="quote">
+            <p>
+              «نخستینِ مهدیان سه نام دارد؛ نامی همانند نام من و پدرم و آن «عبدالله» (بندهٔ خدا) است،
+              و «احمد» (ستوده)، و نام سوم «المهدی» (هدایت‌شده) است؛ و او نخستینِ مؤمنان است.»
+            </p>
+            <figcaption>نقل از وصیت پیامبر، به روایت مانیفست مهدی — با ارجاع به غیبت شیخ طوسی</figcaption>
+          </figure>
+          <p>
+            این منبع می‌گوید از زمان نگارش این وصیت تاکنون، هیچ‌کس جز نویسنده کتاب، عبدالله هاشم، مدعی
+            نام «عبدالله» در آن نشده و جز احمد الحسن مدعی نام «احمد» نشده است؛ هر دو نیز مدعی
+            برخورداری از دانش الهی و دعوت به فرمانروایی خدا هستند. ادعاهای یادشده از باورهای بنیادین
+            این دعوت‌اند و این وب‌سایت آن‌ها را همان‌گونه که در منبع آمده بازگو می‌کند.
+          </p>
+        </div>
+        <div class="card-grid card-grid--2" style="margin-top: var(--space-5);">
+          <article class="card" data-reveal>
             <h3>احمد الحسن</h3>
             <p>
               در منابع رسمی این دعوت — و به‌طور محوری در مانیفست مهدی — احمد الحسن به‌عنوان مهدی موعود و
-              حامل عهد هفتم معرفی شده است. این ادعا از باورهای بنیادین این دعوت است و در کتاب مانیفست به
-              تفصیل بیان شده است.
+              حامل عهد هفتم معرفی شده است؛ در روایت کتاب، پرچم قائم به او می‌رسد و پرچم او شعار
+              «بیعت از آنِ خداست» را دارد.
             </p>
             <a class="card__link" href="manifesto.html">مانیفست مهدی</a>
           </article>
-          <article class="card">
+          <article class="card" data-reveal>
             <h3>عبدالله هاشم (ابا الصادق)</h3>
             <p>
               در منابع این دعوت، عبدالله هاشم — با لقب ابا الصادق — به‌عنوان رهبر امروز این جامعه معرفی
@@ -142,7 +169,96 @@
       </div>
     </section>
 
-    <section class="section" aria-labelledby="manifesto-title">
+    <section class="section" aria-labelledby="criteria-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="criteria-title">سه معیار شناخت حجت</h2>
+          <p>بر اساس مانیفست مهدی، حجت خدا با این سه معیار شناخته می‌شود:</p>
+        </div>
+        <div class="card-grid card-grid--3">
+          <article class="card card--gold" data-reveal>
+            <span class="card__icon" aria-hidden="true">✦</span>
+            <h3>وصیت</h3>
+            <p>نام رهبر برگزیده پیش از ظهورش در وصیت پیشینیان آمده است؛ از آدم تا پیامبر اسلام.</p>
+          </article>
+          <article class="card card--gold" data-reveal>
+            <span class="card__icon" aria-hidden="true">✧</span>
+            <h3>علم</h3>
+            <p>دانشی معنوی و از سوی خدا؛ نه دانشِ صرفاً دنیوی — مبنای داوری عادلانه حجت میان مردم.</p>
+          </article>
+          <article class="card card--gold" data-reveal>
+            <span class="card__icon" aria-hidden="true">✦</span>
+            <h3>پرچم</h3>
+            <p>پرچم او شعار «بیعت از آنِ خداست» را دارد: فرمانروایی خدا، نه انتخاب رهبر به دست مردم.</p>
+          </article>
+        </div>
+        <p class="text-center" style="margin-top: var(--space-4);">
+          <a class="card__link" href="teachings.html#criteria">شرح کامل سه معیار در صفحه آموزه‌ها</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="section section--alt" aria-labelledby="banner-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="banner-title">پرچم؛ بیعت از آنِ خداست</h2>
+        </div>
+        <div class="measure" style="margin-inline: auto;">
+          <p>
+            بر پایه مانیفست مهدی، هر پیامبر و امام به‌عنوان فرمانروایی از سوی خدا فرستاده شده که باید از
+            او پیروی کرد (قرآن، نساء ۶۴) و رنجش خدا بر کسانی فرود آمده که به‌جای رهبران برگزیدهٔ او،
+            خود رهبر گزیده‌اند. در روایت منبع، پرچم محمد و علی به دست قائم می‌رسد و بر پرچم قائم نوشته
+            شده است: «بیعت از آنِ خداست».
+          </p>
+          <p>
+            به تعبیر کتاب، هر کس بیاید و مدعی وصیت شود، دانشی الهی نشان دهد و به فرمانروایی خدا فرا
+            بخواند، راست‌گوست؛ و هر کس نظامی دیگر — از جمله گزینش رهبر به دست مردم در هر شکلی از آن —
+            عرضه کند، در برابر همین پرچم قرار می‌گیرد. این دیدگاه در چارچوب باورهای همین دعوت است.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="call-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="call-title">دعوت و گردهمایی</h2>
+          <p>در روایت منبع، ظهور مهدی با فراخوانی جهانی و گردهمایی مؤمنان حول او همراه است.</p>
+        </div>
+        <div class="card-grid card-grid--3">
+          <article class="card" data-reveal>
+            <h3>گردهمایی مؤمنان</h3>
+            <p>
+              در روایتی که منبع نقل می‌کند، در روزگار قائم، خداوند مردم مشرق و مغرب را گرد می‌آورد،
+              «چنان‌که برگ‌ها در پاییز در یک‌جا گرد می‌آیند». مؤمنان در این روایت فرمان دارند تا به
+              سوی قائم کوچ کنند و در هر شرایطی — حتی با خطر — او را یاری رسانند.
+            </p>
+            <span class="source-ref">منبع: مانیفست مهدی، فصل سوم — با ارجاع به معجم احادیث امام مهدی.</span>
+          </article>
+          <article class="card" data-reveal>
+            <h3>یک خانواده؛ آل‌المهدی</h3>
+            <p>
+              به بیان منبع، مؤمنان نه تنها هم‌ایمان، بلکه هم‌خانواده‌اند: «مؤمنان برادر یکدیگرند»
+              (قرآن، حجرات ۱۰). آنها پیامبر و امام زمان خود را پدر خویش می‌گیرند و جامعه مؤمنان را
+              «آل‌المهدی» می‌نامند؛ خانواده‌ای که در آن حقوق اعضا چون برادران واقعی رعایت می‌شود.
+            </p>
+            <span class="source-ref">منبع: مانیفست مهدی، فصل‌های دوم و سوم.</span>
+          </article>
+          <article class="card" data-reveal>
+            <h3>صبر و کار</h3>
+            <p>
+              در سخنانی که منبع از احمد الحسن نقل می‌کند: «از من کسی را نمی‌خواهم که خسته شود یا
+              دلزده گردد»، «کار کن و کار کن و کار کن، تا نفَست قطع شود» و «دولت عدل الهی هرگز برپا
+              نمی‌شود مگر آنکه نخست در میان خودِ مؤمنان برپا شود». در روایت‌های نقل‌شده نیز از بازگشت
+              یاران دراهی برای یاری قائم سخن گفته شده است.
+            </p>
+            <span class="source-ref">منبع: مانیفست مهدی، فصل سوم.</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" aria-labelledby="manifesto-title">
       <div class="container">
         <div class="section-head">
           <h2 id="manifesto-title">مانیفست مهدی؛ متن معرفی این ادعا</h2>
