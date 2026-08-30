@@ -1,20 +1,31 @@
 /* ============================================================
-   دین احمدیِ صلح و نور — Design System
+   دین صلح و نور احمدی — Design System
    RTL-first, mobile-first, no external requests
+   Palette: deep navy / warm gold / light cream
    ============================================================ */
 
 :root {
-  --color-bg: #faf9f6;
+  --color-bg: #faf8f2;
   --color-surface: #ffffff;
-  --color-ink: #24303a;
-  --color-ink-strong: #16222c;
-  --color-muted: #5c6b78;
-  --color-accent: #0f6b5f;
-  --color-accent-strong: #0b564d;
-  --color-accent-soft: #e7f1ef;
-  --color-gold: #9a6b1f;
-  --color-border: #e4e1da;
-  --color-focus: #0f6b5f;
+  --color-cream: #f2e9c8;
+  --color-cream-soft: #f7f1de;
+
+  --color-ink: #2b3040;
+  --color-ink-strong: #0b1020;
+  --color-muted: #5c6270;
+
+  --color-navy: #0f121d;
+  --color-navy-2: #141b2e;
+  --color-accent: #141b2e;
+  --color-accent-strong: #0b1020;
+  --color-accent-soft: #eef0f5;
+
+  --color-gold: #d6b56a;
+  --color-gold-deep: #8a6a24;
+  --color-gold-soft: #f4ead0;
+
+  --color-border: #e7e2d4;
+  --color-focus: #8a6a24;
 
   --font-body: "Vazirmatn", "Vazir", "IRANSans", "Segoe UI", Tahoma, Arial, sans-serif;
 
@@ -22,8 +33,8 @@
   --radius-m: 14px;
   --radius-l: 20px;
 
-  --shadow-s: 0 1px 2px rgba(22, 34, 44, 0.05);
-  --shadow-m: 0 4px 16px rgba(22, 34, 44, 0.07);
+  --shadow-s: 0 1px 2px rgba(11, 16, 32, 0.05);
+  --shadow-m: 0 6px 20px rgba(11, 16, 32, 0.09);
 
   --space-1: 0.25rem;
   --space-2: 0.5rem;
@@ -98,7 +109,7 @@ a {
 }
 
 a:hover {
-  color: var(--color-accent-strong);
+  color: var(--color-gold-deep);
 }
 
 :focus-visible {
@@ -108,7 +119,7 @@ a:hover {
 }
 
 ::selection {
-  background: var(--color-accent-soft);
+  background: var(--color-gold-soft);
 }
 
 /* ---------- Layout ---------- */
@@ -124,7 +135,7 @@ a:hover {
 }
 
 .section--alt {
-  background-color: var(--color-surface);
+  background-color: var(--color-cream-soft);
   border-block: 1px solid var(--color-border);
 }
 
@@ -173,7 +184,7 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(250, 249, 246, 0.92);
+  background: rgba(250, 248, 242, 0.94);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--color-border);
 }
@@ -193,7 +204,7 @@ a:hover {
   text-decoration: none;
   color: var(--color-ink-strong);
   font-weight: 700;
-  font-size: 1.02rem;
+  font-size: 1rem;
 }
 
 .brand__logo {
@@ -242,7 +253,7 @@ a:hover {
 
 .site-nav__list a {
   display: block;
-  padding: 0.65rem 0.75rem;
+  padding: 0.6rem 0.75rem;
   border-radius: var(--radius-s);
   text-decoration: none;
   color: var(--color-ink);
@@ -250,13 +261,26 @@ a:hover {
 }
 
 .site-nav__list a:hover {
-  background: var(--color-accent-soft);
-  color: var(--color-accent-strong);
+  background: var(--color-gold-soft);
+  color: var(--color-gold-deep);
 }
 
 .site-nav__list a[aria-current="page"] {
-  color: var(--color-accent-strong);
+  color: var(--color-gold-deep);
   font-weight: 700;
+}
+
+.nav-tg {
+  background: var(--color-gold);
+  color: var(--color-ink-strong) !important;
+  font-weight: 700 !important;
+  border-radius: 999px !important;
+  text-align: center;
+}
+
+.nav-tg:hover {
+  background: var(--color-gold-deep);
+  color: #fff !important;
 }
 
 /* ---------- Buttons ---------- */
@@ -283,7 +307,7 @@ a:hover {
 
 .btn--primary:hover {
   background: var(--color-accent-strong);
-  color: #fff;
+  color: var(--color-gold);
 }
 
 .btn--ghost {
@@ -293,8 +317,40 @@ a:hover {
 }
 
 .btn--ghost:hover {
-  background: var(--color-accent-soft);
+  background: var(--color-gold-soft);
+  color: var(--color-gold-deep);
+  border-color: var(--color-gold);
+}
+
+.btn--gold {
+  background: var(--color-gold);
+  color: var(--color-ink-strong);
+}
+
+.btn--gold:hover {
+  background: var(--color-gold-deep);
+  color: #fff;
+}
+
+.btn--light {
+  background: #fff;
   color: var(--color-accent-strong);
+}
+
+.btn--light:hover {
+  background: var(--color-cream);
+  color: var(--color-accent-strong);
+}
+
+.btn--outline-light {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.btn--outline-light:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
 }
 
 .btn-row {
@@ -308,8 +364,8 @@ a:hover {
 .hero {
   padding-block: var(--space-6);
   background:
-    radial-gradient(60rem 30rem at 85% -10%, rgba(15, 107, 95, 0.08), transparent 60%),
-    radial-gradient(50rem 26rem at 5% 110%, rgba(154, 107, 31, 0.07), transparent 60%),
+    radial-gradient(60rem 30rem at 85% -10%, rgba(214, 181, 106, 0.16), transparent 60%),
+    radial-gradient(50rem 26rem at 5% 110%, rgba(15, 18, 29, 0.07), transparent 60%),
     var(--color-bg);
   border-bottom: 1px solid var(--color-border);
 }
@@ -328,11 +384,20 @@ a:hover {
 }
 
 .hero h1 {
-  max-width: 34rem;
+  max-width: 36rem;
+}
+
+.hero__eyebrow {
+  display: inline-block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--color-gold-deep);
+  margin-bottom: var(--space-2);
 }
 
 .hero__lead {
-  max-width: 38rem;
+  max-width: 40rem;
   color: var(--color-muted);
   font-size: 1.1rem;
 }
@@ -346,9 +411,15 @@ a:hover {
 .card {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
+  border-top: 3px solid transparent;
   border-radius: var(--radius-m);
   padding: var(--space-4);
   box-shadow: var(--shadow-s);
+  transition: border-top-color 150ms ease;
+}
+
+.card:hover {
+  border-top-color: var(--color-gold);
 }
 
 .card h3 {
@@ -367,8 +438,8 @@ a:hover {
   width: 2.75rem;
   height: 2.75rem;
   border-radius: 50%;
-  background: var(--color-accent-soft);
-  color: var(--color-accent-strong);
+  background: var(--color-gold-soft);
+  color: var(--color-gold-deep);
   font-size: 1.2rem;
   margin-bottom: var(--space-3);
 }
@@ -377,6 +448,20 @@ a:hover {
   display: inline-block;
   margin-top: var(--space-3);
   font-weight: 600;
+}
+
+/* ---------- Covenant cards ---------- */
+.covenant-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  background: var(--color-navy);
+  color: var(--color-gold);
+  font-weight: 700;
+  margin-bottom: var(--space-3);
 }
 
 /* ---------- Steps ---------- */
@@ -411,9 +496,21 @@ a:hover {
   width: 2.4rem;
   height: 2.4rem;
   border-radius: 50%;
-  background: var(--color-accent-soft);
-  color: var(--color-accent-strong);
+  background: var(--color-navy);
+  color: var(--color-gold);
   font-weight: 700;
+}
+
+/* ---------- Badges ---------- */
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.8rem;
+  border-radius: 999px;
+  background: var(--color-gold-soft);
+  color: var(--color-gold-deep);
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-bottom: var(--space-3);
 }
 
 /* ---------- FAQ ---------- */
@@ -453,7 +550,7 @@ a:hover {
   top: 50%;
   transform: translateY(-50%);
   font-size: 1.4rem;
-  color: var(--color-accent);
+  color: var(--color-gold-deep);
   line-height: 1;
 }
 
@@ -469,49 +566,56 @@ a:hover {
 
 /* ---------- Callout / CTA ---------- */
 .cta-panel {
-  background: linear-gradient(160deg, var(--color-accent-strong), var(--color-accent));
+  background: linear-gradient(160deg, var(--color-navy-2), var(--color-navy));
   color: #fff;
   border-radius: var(--radius-l);
   padding: var(--space-6) var(--space-4);
   text-align: center;
   box-shadow: var(--shadow-m);
+  border: 1px solid rgba(214, 181, 106, 0.35);
 }
 
 .cta-panel h2 {
-  color: #fff;
+  color: var(--color-gold);
 }
 
 .cta-panel p {
-  color: rgba(255, 255, 255, 0.88);
-  max-width: 34rem;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 36rem;
   margin-inline: auto;
 }
 
-.cta-panel .btn--primary {
-  background: #fff;
-  color: var(--color-accent-strong);
-}
-
-.cta-panel .btn--primary:hover {
-  background: var(--color-accent-soft);
-}
-
-.cta-panel .btn--ghost {
-  color: #fff;
-  border-color: rgba(255, 255, 255, 0.7);
-}
-
-.cta-panel .btn--ghost:hover {
-  background: rgba(255, 255, 255, 0.12);
+.cta-panel a {
+  color: var(--color-gold);
 }
 
 /* ---------- Note box ---------- */
 .note {
+  background: var(--color-cream-soft);
+  border: 1px solid color-mix(in srgb, var(--color-gold) 45%, transparent);
+  border-radius: var(--radius-m);
+  padding: var(--space-3) var(--space-4);
+  color: var(--color-gold-deep);
+}
+
+.notice {
   background: var(--color-accent-soft);
-  border: 1px solid color-mix(in srgb, var(--color-accent) 25%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-navy) 30%, transparent);
   border-radius: var(--radius-m);
   padding: var(--space-3) var(--space-4);
   color: var(--color-accent-strong);
+  max-width: 46rem;
+  margin-inline: auto;
+}
+
+.notice p {
+  margin: 0;
+}
+
+/* ---------- Resource blocks ---------- */
+.resource-card .btn-row {
+  justify-content: flex-start;
+  margin-top: var(--space-3);
 }
 
 /* ---------- Forms ---------- */
@@ -549,24 +653,27 @@ a:hover {
 
 .field input:focus,
 .field textarea:focus {
-  border-color: var(--color-accent);
-  outline: 2px solid var(--color-accent);
+  border-color: var(--color-gold);
+  outline: 2px solid var(--color-gold);
   outline-offset: 1px;
 }
 
 /* ---------- Footer ---------- */
 .site-footer {
-  border-top: 1px solid var(--color-border);
-  background: var(--color-surface);
-  padding-block: var(--space-5);
+  background: var(--color-navy);
+  color: rgba(255, 255, 255, 0.85);
   margin-top: var(--space-6);
+  padding-block: var(--space-5) var(--space-4);
+}
+
+.site-footer a {
+  color: var(--color-gold);
 }
 
 .site-footer__inner {
   display: grid;
-  gap: var(--space-4);
-  justify-items: center;
-  text-align: center;
+  gap: var(--space-5);
+  align-items: start;
 }
 
 .site-footer__brand {
@@ -574,37 +681,63 @@ a:hover {
   align-items: center;
   gap: 0.6rem;
   text-decoration: none;
-  color: var(--color-ink-strong);
+  color: #fff;
   font-weight: 700;
 }
 
 .site-footer__brand .brand__logo {
-  height: 2.2rem;
+  height: 2.4rem;
 }
 
-.site-footer__nav {
+.site-footer__brand:hover {
+  color: var(--color-gold);
+}
+
+.site-footer__desc {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.95rem;
+  max-width: 26rem;
+  margin-block: var(--space-2) var(--space-3);
+}
+
+.site-footer__heading {
+  color: var(--color-gold);
+  font-size: 1rem;
+  margin-bottom: var(--space-2);
+}
+
+.site-footer__nav,
+.site-footer__links {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2) var(--space-4);
-  justify-content: center;
+  display: grid;
+  gap: 0.35rem;
 }
 
-.site-footer__nav a {
-  color: var(--color-muted);
+.site-footer__nav a,
+.site-footer__links a {
+  color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
 }
 
-.site-footer__nav a:hover {
-  color: var(--color-accent-strong);
+.site-footer__nav a:hover,
+.site-footer__links a:hover {
+  color: var(--color-gold);
   text-decoration: underline;
 }
 
 .site-footer__meta {
-  color: var(--color-muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  color: rgba(255, 255, 255, 0.65);
   font-size: 0.9rem;
+  text-align: center;
+}
+
+.site-footer__meta p {
+  margin: 0 0 var(--space-1);
 }
 
 /* ---------- Breadcrumb ---------- */
@@ -645,7 +778,7 @@ a:hover {
 .page-header .lead {
   color: var(--color-muted);
   font-size: 1.08rem;
-  max-width: 40rem;
+  max-width: 42rem;
 }
 
 /* ---------- Responsive ---------- */
@@ -693,7 +826,18 @@ a:hover {
     padding: var(--space-7) var(--space-6);
   }
 
-  /* Desktop nav */
+  .site-footer__inner {
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: var(--space-4);
+  }
+
+  .site-footer__meta {
+    text-align: start;
+  }
+}
+
+/* Desktop navigation — enough room for 7 links + Telegram pill */
+@media (min-width: 64em) {
   .site-nav__toggle {
     display: none;
   }
@@ -702,7 +846,7 @@ a:hover {
     display: flex !important;
     flex-direction: row;
     align-items: center;
-    gap: var(--space-1);
+    gap: 0.15rem;
     position: static;
     background: transparent;
     border: 0;
@@ -711,18 +855,14 @@ a:hover {
   }
 
   .site-nav__list a {
-    padding: 0.45rem 0.85rem;
+    padding: 0.4rem 0.65rem;
+    font-size: 0.92rem;
+    white-space: nowrap;
   }
 
-  .site-footer__inner {
-    grid-template-columns: auto 1fr;
-    justify-items: start;
-    text-align: start;
-    align-items: center;
-  }
-
-  .site-footer__nav {
-    justify-content: flex-end;
+  .nav-tg {
+    margin-inline-start: 0.5rem;
+    padding: 0.45rem 1rem !important;
   }
 }
 
