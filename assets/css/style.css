@@ -789,6 +789,10 @@ a:hover {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .card-grid--3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .hero__inner {
     justify-items: start;
     text-align: start;
@@ -800,6 +804,13 @@ a:hover {
 
   .hero .btn-row {
     justify-content: flex-start;
+  }
+}
+
+/* Tablet: three-card grids step up to two columns */
+@media (min-width: 40em) and (max-width: 55.99em) {
+  .card-grid--3 > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
   }
 }
 
