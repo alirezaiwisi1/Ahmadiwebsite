@@ -18,9 +18,13 @@
   <meta name="twitter:title" content="دین صلح و نور احمدی | معرفی، آموزه‌ها و منابع">
   <meta name="twitter:description" content="آشنایی با دین صلح و نور احمدی، آموزه‌ها و عهدهای هفت‌گانه، منابع اصلی و جامعه فارسی‌زبان.">
   <meta name="twitter:image" content="https://alirezaiwisi1.github.io/Ahmadiwebsite/assets/images/logo.webp">
-  <meta name="theme-color" content="#0b1020">
+  <meta name="theme-color" content="#faf6ef">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="alternate icon" href="assets/images/logo.webp" type="image/webp">
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <script type="application/ld+json">
   {
@@ -48,6 +52,19 @@
 <body>
   <a class="skip-link" href="#main-content">پرش به محتوای اصلی</a>
 
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <symbol id="ic-tg" viewBox="0 0 24 24"><path fill="currentColor" d="M21.9 4.6 2.9 11.9c-1 .4-1 1.4-.2 1.7l4.8 1.5 1.8 5.6c.3.8 1 .9 1.6.4l2.6-2.4 4.9 3.6c.8.5 1.7.2 1.9-.8l3.1-15.3c.3-1.2-.5-1.9-1.5-1.6z"/></symbol>
+    <symbol id="ic-book" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></symbol>
+    <symbol id="ic-reader" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M2 4h6a4 4 0 0 1 4 4v12a3 3 0 0 0-3-3H2zm20 0h-6a4 4 0 0 0-4 4v12a3 3 0 0 1 3-3h7z"/></symbol>
+    <symbol id="ic-audio" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14v-3a9 9 0 0 1 18 0v3"/><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Z"/><path d="M21 14h-3a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-5Z"/></g></symbol>
+    <symbol id="ic-download" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></g></symbol>
+    <symbol id="ic-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></symbol>
+    <symbol id="ic-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><line x1="12" y1="1.5" x2="12" y2="3.5"/><line x1="12" y1="20.5" x2="12" y2="22.5"/><line x1="4.6" y1="4.6" x2="6" y2="6"/><line x1="18" y1="18" x2="19.4" y2="19.4"/><line x1="1.5" y1="12" x2="3.5" y2="12"/><line x1="20.5" y1="12" x2="22.5" y2="12"/><line x1="4.6" y1="19.4" x2="6" y2="18"/><line x1="18" y1="6" x2="19.4" y2="4.6"/></g></symbol>
+    <symbol id="ic-star8" viewBox="0 0 24 24"><path fill="currentColor" d="M22 12 17.1 14.1 19.1 19.1 14.1 17.1 12 22 9.9 17.1 4.9 19.1 6.9 14.1 2 12 6.9 9.9 4.9 4.9 9.9 6.9 12 2 14.1 6.9 19.1 4.9 17.1 9.9Z"/></symbol>
+  </svg>
+
+  <div class="reading-progress" aria-hidden="true"><span></span></div>
+
   <header class="site-header">
     <div class="container site-header__inner">
       <a class="brand" href="index.html">
@@ -55,8 +72,8 @@
         <span>دین صلح و نور احمدی</span>
       </a>
       <nav class="site-nav" aria-label="ناوبری اصلی">
-        <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
-          <span aria-hidden="true">☰</span> منو
+        <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="نمایش یا پنهان‌سازی منو">
+          <span class="site-nav__toggle-bars" aria-hidden="true"></span>
         </button>
         <ul class="site-nav__list" id="primary-menu">
           <li><a href="index.html" aria-current="page">خانه</a></li>
@@ -66,34 +83,65 @@
           <li><a href="resources.html">کتاب‌ها و منابع</a></li>
           <li><a href="faq.html">پرسش‌های متداول</a></li>
           <li><a href="contact.html">ارتباط</a></li>
-          <li><a class="nav-tg" href="https://t.me/theahmadireligionfarsi" target="_blank" rel="noopener" aria-label="گروه تلگرام دین صلح و نور احمدی — باز شدن در تلگرام">گروه تلگرام <span aria-hidden="true">↗</span></a></li>
+          <li><a class="nav-tg" href="https://t.me/theahmadireligionfarsi" target="_blank" rel="noopener" aria-label="گروه تلگرام دین صلح و نور احمدی — باز شدن در تلگرام"><svg class="ic" aria-hidden="true"><use href="#ic-tg"/></svg>گروه تلگرام</a></li>
         </ul>
       </nav>
       <button class="theme-toggle" id="theme-toggle" type="button" aria-label="تغییر پوسته روشن و تاریک" aria-pressed="false">
-        <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">☾</span>
-        <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☀</span>
+        <svg class="ic theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true"><use href="#ic-moon"/></svg>
+        <svg class="ic theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true"><use href="#ic-sun"/></svg>
       </button>
     </div>
   </header>
 
   <main id="main-content" tabindex="-1">
+
     <!-- Hero -->
     <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__bg" aria-hidden="true">
+        <svg viewBox="0 0 900 900">
+          <defs>
+            <radialGradient id="heroGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#f97316" stop-opacity="0.20"/>
+              <stop offset="55%" stop-color="#f97316" stop-opacity="0.06"/>
+              <stop offset="100%" stop-color="#f97316" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="heroRing" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#f97316" stop-opacity="0.7"/>
+              <stop offset="100%" stop-color="#ea580c" stop-opacity="0.05"/>
+            </linearGradient>
+          </defs>
+          <circle cx="450" cy="450" r="440" fill="url(#heroGlow)"/>
+          <g class="hero-spin" fill="none" stroke="url(#heroRing)">
+            <circle cx="450" cy="450" r="360" stroke-width="1.5" stroke-dasharray="5 14"/>
+            <circle cx="450" cy="450" r="275" stroke-width="1" stroke-dasharray="2 18" opacity="0.75"/>
+          </g>
+          <g class="hero-spin hero-spin--rev" fill="none" stroke="url(#heroRing)">
+            <circle cx="450" cy="450" r="190" stroke-width="1.5" stroke-dasharray="70 34" opacity="0.5"/>
+          </g>
+          <use href="#ic-star8" x="435" y="45" width="30" height="30" fill="#f97316" opacity="0.8"/>
+          <use href="#ic-star8" x="118" y="330" width="18" height="18" fill="#f97316" opacity="0.55"/>
+          <use href="#ic-star8" x="756" y="620" width="22" height="22" fill="#f97316" opacity="0.6"/>
+        </svg>
+      </div>
+
       <div class="container hero__inner">
-        <img class="hero__logo" src="assets/images/logo.webp" alt="نشان دین صلح و نور احمدی" width="160" height="160">
-        <div>
-          <p class="hero__eyebrow">The Ahmadi Religion of Peace &amp; Light</p>
-          <h1 id="hero-title">دین صلح و نور احمدی</h1>
-          <p class="hero__lead">
-            «دین صلح و نور احمدی» دعوتی جهانی است که پیروان آن آن را ادامه‌ی زنجیره‌ی عهدهای الهی در عصر حاضر
-            می‌دانند. این وب‌سایت نقطه‌ای روشن و آرام برای آشنایی با این دعوت، آموزه‌های آن و منابع اصلی آن است.
-          </p>
-          <div class="btn-row">
-            <a class="btn btn--primary" href="about.html">آشنایی با دین</a>
-            <a class="btn btn--ghost" href="manifesto.html">مطالعه مانیفست</a>
-            <a class="btn btn--gold" href="resources.html">منابع و کتاب‌ها</a>
-          </div>
+        <img class="hero__logo" src="assets/images/logo.webp" alt="نشان دین صلح و نور احمدی" width="160" height="160" data-reveal>
+        <p class="hero__eyebrow" data-reveal>The Ahmadi Religion of Peace &amp; Light</p>
+        <h1 id="hero-title" data-reveal>دین صلح و نور <span class="text-gold">احمدی</span></h1>
+        <p class="hero__lead" data-reveal>
+          «دین صلح و نور احمدی» دعوتی جهانی است که پیروان آن آن را ادامه‌ی زنجیره‌ی عهدهای الهی در عصر حاضر
+          می‌دانند. این وب‌سایت نقطه‌ای روشن و آرام برای آشنایی با این دعوت، آموزه‌های آن و منابع اصلی آن است.
+        </p>
+        <div class="btn-row" data-reveal>
+          <a class="btn btn--primary" href="about.html">آشنایی با دین</a>
+          <a class="btn btn--gold" href="reader.html?book=manifesto-fa"><svg class="ic" aria-hidden="true"><use href="#ic-reader"/></svg> مطالعه مانیفست</a>
+          <a class="btn btn--ghost" href="resources.html">منابع و کتاب‌ها</a>
         </div>
+        <ul class="hero__stats" data-reveal>
+          <li><strong>۷</strong><span>عهدهای الهی</span></li>
+          <li><strong>۳</strong><span>معیار شناخت حجت</span></li>
+          <li><strong>۲</strong><span>کتاب بنیادین</span></li>
+        </ul>
       </div>
     </section>
 
@@ -109,19 +157,19 @@
         </div>
         <div class="card-grid card-grid--3">
           <article class="card" data-reveal>
-            <span class="card__icon" aria-hidden="true">✦</span>
+            <span class="card__icon" aria-hidden="true"><svg class="ic"><use href="#ic-star8"/></svg></span>
             <h3>عهدهای هفت‌گانه</h3>
             <p>هدایت الهی از آدم تا عهد هفتم، در قالب هفت عهد پیوسته روایت می‌شود؛ هر عهد با شریعتی نو گشوده می‌شود.</p>
             <a class="card__link" href="teachings.html">آموزه‌ها و هفت عهد</a>
           </article>
           <article class="card" data-reveal>
-            <span class="card__icon" aria-hidden="true">✧</span>
+            <span class="card__icon" aria-hidden="true"><svg class="ic"><use href="#ic-book"/></svg></span>
             <h3>منابع اصلی</h3>
             <p>«مانیفست مهدی» مرجع اصلی معرفی این دعوت است و «هدف حکیم» نیز از کتاب‌های بنیادین آن به شمار می‌آید؛ هر دو همراه با خوانش صوتی در دسترس‌اند.</p>
             <a class="card__link" href="resources.html">کتاب‌ها و منابع</a>
           </article>
           <article class="card" data-reveal>
-            <span class="card__icon" aria-hidden="true">✦</span>
+            <span class="card__icon" aria-hidden="true"><svg class="ic"><use href="#ic-tg"/></svg></span>
             <h3>جامعه فارسی‌زبان</h3>
             <p>گروه تلگرام فارسی‌زبان این دعوت، محل پرسش، گفت‌وگو و دریافت نسخه‌های کتاب‌ها و خوانش‌های صوتی است.</p>
             <a class="card__link" href="https://t.me/theahmadireligionfarsi" target="_blank" rel="noopener" aria-label="گروه تلگرام دین صلح و نور احمدی — باز شدن در تلگرام">عضویت در گروه تلگرام ↗</a>
@@ -129,6 +177,8 @@
         </div>
       </div>
     </section>
+
+    <div class="ornament" aria-hidden="true"><svg class="ic"><use href="#ic-star8"/></svg></div>
 
     <!-- Three recognition criteria -->
     <section class="section" aria-labelledby="criteria-title">
@@ -142,19 +192,19 @@
         </div>
         <div class="card-grid card-grid--3">
           <article class="card card--gold" data-reveal>
-            <span class="card__icon" aria-hidden="true">✦</span>
+            <span class="card__icon" aria-hidden="true"><svg class="ic"><use href="#ic-star8"/></svg></span>
             <h3>وصیت</h3>
             <p>نام رهبر برگزیده، پیش از ظهورش در وصیت پیشینیان آمده است؛ از وصیت آدم تا وصیت پیامبر اسلام با دوازده امام و دوازده مهدی. کسی که نامش در وصیت پیشینیان نباشد، از سوی خدا برگزیده نشده است.</p>
             <a class="card__link" href="teachings.html#criteria">مطالعه بیشتر</a>
           </article>
           <article class="card card--gold" data-reveal>
-            <span class="card__icon" aria-hidden="true">✧</span>
+            <span class="card__icon" aria-hidden="true"><svg class="ic"><use href="#ic-star8"/></svg></span>
             <h3>علم</h3>
             <p>حجت خدا دانشی معنوی و الهی دارد، نه دانشی صرفاً دنیوی؛ با همین دانش است که دل‌ها را می‌شناسد و میان مردم به عدالت داوری می‌کند.</p>
             <a class="card__link" href="teachings.html#criteria">مطالعه بیشتر</a>
           </article>
           <article class="card card--gold" data-reveal>
-            <span class="card__icon" aria-hidden="true">✦</span>
+            <span class="card__icon" aria-hidden="true"><svg class="ic"><use href="#ic-star8"/></svg></span>
             <h3>پرچم</h3>
             <p>پرچم حجت خدا شعار «بیعت از آنِ خداست» را دارد: فراخوانی به فرمانروایی خدا، نه گزینش رهبر به دست مردم.</p>
             <a class="card__link" href="teachings.html#criteria">مطالعه بیشتر</a>
@@ -188,12 +238,14 @@
       </div>
     </section>
 
+    <div class="ornament" aria-hidden="true"><svg class="ic"><use href="#ic-star8"/></svg></div>
+
     <!-- Books -->
     <section class="section" aria-labelledby="books-title">
       <div class="container">
         <div class="section-head">
-          <h2 id="books-title">کتاب‌ها را همین‌جا دریافت کنید</h2>
-          <p>دو منبع اصلی این دعوت، به‌همراه نسخه‌های صوتی، از طریق دانلود مستقیم یا تلگرام در دسترس شماست.</p>
+          <h2 id="books-title">کتاب‌ها را همین‌جا بخوانید و دریافت کنید</h2>
+          <p>دو منبع اصلی این دعوت؛ هم بدون دانلود و مستقیم در کتاب‌خوان وب‌سایت قابل مطالعه‌اند و هم از طریق دانلود مستقیم یا تلگرام در دسترس شماست.</p>
         </div>
         <div class="card-grid card-grid--2">
           <article class="card resource-card" data-reveal>
@@ -201,8 +253,9 @@
             <h3>مانیفست مهدی</h3>
             <p>مرجع اصلی معرفی دین صلح و نور احمدی؛ متن پایه این دعوت برای آشنایی جدی با آموزه‌های آن.</p>
             <div class="btn-row">
-              <a class="btn btn--primary" href="https://theahmadireligion.org/download/42616/?tmstv=1765124110" target="_blank" rel="noopener" aria-label="دانلود مستقیم مانیفست مهدی — باز شدن در وب‌سایت رسمی">دانلود مستقیم</a>
-              <a class="btn btn--gold" href="https://t.me/theahmadireligion_farsi_channel/7125?single" target="_blank" rel="noopener" aria-label="دانلود مانیفست مهدی در تلگرام — باز شدن در تلگرام">دریافت از تلگرام ↗</a>
+              <a class="btn btn--primary" href="reader.html?book=manifesto-fa"><svg class="ic" aria-hidden="true"><use href="#ic-reader"/></svg> مطالعه در وب‌سایت</a>
+              <a class="btn btn--gold" href="https://theahmadireligion.org/download/42616/?tmstv=1765124110" target="_blank" rel="noopener" aria-label="دانلود مستقیم مانیفست مهدی — باز شدن در وب‌سایت رسمی"><svg class="ic" aria-hidden="true"><use href="#ic-download"/></svg> دانلود مستقیم</a>
+              <a class="btn btn--ghost" href="https://t.me/theahmadireligion_farsi_channel/7125?single" target="_blank" rel="noopener" aria-label="دانلود مانیفست مهدی در تلگرام — باز شدن در تلگرام">دریافت از تلگرام ↗</a>
             </div>
           </article>
           <article class="card resource-card" data-reveal>
@@ -210,7 +263,7 @@
             <h3>هدف حکیم</h3>
             <p>کتاب بنیادین این دعوت به قلم عبدالله هاشم (ابا الصادق)؛ همراه با خوانش صوتی در تلگرام.</p>
             <div class="btn-row">
-              <a class="btn btn--primary" href="https://theahmadireligion.org/download/42889/?tmstv=1765481076" target="_blank" rel="noopener" aria-label="دانلود مستقیم هدف حکیم — باز شدن در وب‌سایت رسمی">دانلود مستقیم</a>
+              <a class="btn btn--primary" href="https://theahmadireligion.org/download/42889/?tmstv=1765481076" target="_blank" rel="noopener" aria-label="دانلود مستقیم هدف حکیم — باز شدن در وب‌سایت رسمی"><svg class="ic" aria-hidden="true"><use href="#ic-download"/></svg> دانلود مستقیم</a>
               <a class="btn btn--gold" href="https://t.me/theahmadireligion_farsi_channel/7121?single" target="_blank" rel="noopener" aria-label="هدف حکیم — دانلود کتاب و خوانش صوتی در تلگرام">دریافت از تلگرام و خوانش صوتی ↗</a>
             </div>
           </article>
@@ -247,6 +300,8 @@
       </div>
     </section>
 
+    <div class="ornament" aria-hidden="true"><svg class="ic"><use href="#ic-star8"/></svg></div>
+
     <!-- Reading journey -->
     <section class="section" aria-labelledby="journey-title">
       <div class="container">
@@ -255,19 +310,19 @@
           <p>پیشنهاد ما برای آشنایی گام‌به‌گام:</p>
         </div>
         <ol class="steps">
-          <li>
+          <li data-reveal>
             <h3>آشنایی کوتاه</h3>
             <p>با صفحه «آشنایی با دین» شروع کنید تا تصویر کلی، مبانی دعوت و شخصیت‌های محوری روشن شود.</p>
           </li>
-          <li>
+          <li data-reveal>
             <h3>آموزه‌ها و هفت عهد</h3>
             <p>چارچوب اصلی آموزه‌های این دین را در صفحه آموزه‌ها ببینید و درباره هر عهد بیشتر بخوانید.</p>
           </li>
-          <li>
+          <li data-reveal>
             <h3>مطالعه منابع</h3>
-            <p>«مانیفست مهدی» و «هدف حکیم» را دریافت کنید؛ هم دانلود مستقیم و هم نسخه تلگرام و صوتی در دسترس است.</p>
+            <p>«مانیفست مهدی» و «هدف حکیم» را مطالعه کنید؛ هم کتاب‌خوان وب‌سایت و هم دانلود مستقیم و نسخه تلگرام و صوتی در دسترس است.</p>
           </li>
-          <li>
+          <li data-reveal>
             <h3>گفت‌وگو و پرسش</h3>
             <p>پرسش‌های متداول را مرور کنید و در گروه تلگرام فارسی‌زبان با جامعه این دعوت در ارتباط باشید.</p>
           </li>
@@ -300,7 +355,7 @@
         <p class="site-footer__desc">
           وب‌سایت معرفی «دین صلح و نور احمدی»؛ برای آشنایی با آموزه‌های این دعوت، مطالعه منابع اصلی و ارتباط با جامعه فارسی‌زبان.
         </p>
-        <a class="btn btn--gold" href="https://t.me/theahmadireligionfarsi" target="_blank" rel="noopener" aria-label="گروه تلگرام دین صلح و نور احمدی — باز شدن در تلگرام">گروه تلگرام دین صلح و نور احمدی ↗</a>
+        <a class="btn btn--gold" href="https://t.me/theahmadireligionfarsi" target="_blank" rel="noopener" aria-label="گروه تلگرام دین صلح و نور احمدی — باز شدن در تلگرام"><svg class="ic" aria-hidden="true"><use href="#ic-tg"/></svg> گروه تلگرام دین صلح و نور احمدی</a>
       </div>
       <nav aria-label="ناوبری پابرگ">
         <h3 class="site-footer__heading">صفحه‌ها</h3>
@@ -319,6 +374,8 @@
         <ul class="site-footer__links">
           <li><a href="manifesto.html">مانیفست مهدی</a></li>
           <li><a href="wisdom.html">هدف حکیم</a></li>
+          <li><a href="reader.html?book=manifesto-fa">مطالعه مانیفست مهدی (فارسی)</a></li>
+          <li><a href="reader.html?book=manifesto-en">Read the Mahdi's Manifesto (English)</a></li>
           <li><a href="https://t.me/theahmadireligion_farsi_channel/7125?single" target="_blank" rel="noopener" aria-label="دانلود مانیفست مهدی در تلگرام — باز شدن در تلگرام">دانلود مانیفست در تلگرام ↗</a></li>
           <li><a href="https://t.me/theahmadireligion_farsi_channel/7121?single" target="_blank" rel="noopener" aria-label="هدف حکیم — دانلود کتاب و خوانش صوتی در تلگرام">هدف حکیم و خوانش صوتی ↗</a></li>
         </ul>

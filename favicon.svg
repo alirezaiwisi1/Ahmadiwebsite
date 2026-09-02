@@ -1,5 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <circle cx="32" cy="32" r="30" fill="#0B1020"/>
-  <circle cx="32" cy="32" r="23" fill="none" stroke="#D6B56A" stroke-width="2.5"/>
-  <circle cx="32" cy="32" r="9" fill="#F2E9C8"/>
+  <defs>
+    <linearGradient id="favG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F97316"/>
+      <stop offset="1" stop-color="#C2410C"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#favG)"/>
+  <path fill="#FFF4E8" d="M44 32 39.7 33.85 41.35 38.35 36.85 36.7 35 41 33.15 36.7 28.65 38.35 30.3 33.85 26 32 30.3 30.15 28.65 25.65 33.15 27.3 35 23 36.85 27.3 41.35 25.65 39.7 30.15Z"/>
+  <circle cx="35" cy="32" r="4.2" fill="#FFF4E8"/>
+  <circle cx="21" cy="18" r="2.1" fill="#FFD9B3" opacity="0.9"/>
+  <circle cx="18" cy="45" r="1.6" fill="#FFD9B3" opacity="0.8"/>
+  <circle cx="49" cy="47" r="1.8" fill="#FFD9B3" opacity="0.85"/>
 </svg>

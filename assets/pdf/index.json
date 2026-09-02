@@ -1,0 +1,31 @@
+[
+  {
+    "id": "manifesto-fa",
+    "alias": ["manifesto", "manifesto-fa", "mahdi-manifesto-fa"],
+    "title": "مانیفست مهدی — نسخهٔ فارسی",
+    "author": "عبدالله هاشم (ابا الصادق)",
+    "file": "The_Mahdis_Manifesto_Booklet_Farsi.pdf",
+    "download": "https://theahmadireligion.org/download/42616/?tmstv=1765124110",
+    "telegram": "https://t.me/theahmadireligion_farsi_channel/7125?single",
+    "audio": "https://t.me/theahmadireligion_farsi_channel/7127"
+  },
+  {
+    "id": "manifesto-en",
+    "alias": ["manifesto-en", "mahdi-manifesto-en"],
+    "title": "The Mahdi's Manifesto — English",
+    "author": "Abdullah Hashem (Aba Al-Sadiq)",
+    "file": "The-Mahdis-Manifesto.pdf",
+    "download": "https://theahmadireligion.org/download/42616/?tmstv=1765124110",
+    "telegram": "https://t.me/theahmadireligion_farsi_channel/7125?single"
+  },
+  {
+    "id": "hadaf-hakim",
+    "alias": ["hadaf", "wisdom", "goal-of-the-wise"],
+    "title": "هدف حکیم",
+    "author": "عبدالله هاشم (ابا الصادق)",
+    "file": "Hadaf-Hakim.pdf",
+    "download": "https://theahmadireligion.org/download/42889/?tmstv=1765481076",
+    "telegram": "https://t.me/theahmadireligion_farsi_channel/7121?single",
+    "audio": "https://t.me/theahmadireligion_farsi_channel/6010"
+  }
+]

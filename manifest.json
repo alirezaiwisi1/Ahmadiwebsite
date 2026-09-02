@@ -1,0 +1,20 @@
+{
+  "name": "دین صلح و نور احمدی",
+  "short_name": "صلح و نور",
+  "description": "وب‌سایت معرفی دین صلح و نور احمدی؛ آموزه‌ها، منابع و کتاب‌خوان داخلی.",
+  "lang": "fa",
+  "dir": "rtl",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#faf6ef",
+  "theme_color": "#ea580c",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
