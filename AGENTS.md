@@ -30,16 +30,21 @@ folder and is gitignored.
   from the PDF operator list, two-layer dark-mode compositing, already-dark
   page detection, Persian-aware search normalization.
 - `assets/js/pdf-reader.js` — the in-site reader (`reader.html`): PDF.js
-  5.4.149 from cdnjs, fit-width continuous scroll with page virtualization,
-  Veil-style dark mode (base canvas `invert(0.86) hue-rotate(180deg)`, overlay
-  canvas repaints original image pixels), text selection via pdf.js TextLayer,
-  search with Persian normalization, zoom, fullscreen, position memory
-  (`ahmadi-reader-pos` in localStorage).
+  5.4.149 loaded from the full `pdfjs-dist` npm package via jsDelivr (build,
+  `cmaps/`, `standard_fonts/`, `iccs/`, `wasm/` — cdnjs only mirrors the build
+  files and breaks Persian/Arabic glyph mapping), fit-width continuous scroll
+  with page virtualization, Veil-style dark mode (base canvas
+  `invert(0.86) hue-rotate(180deg)`, overlay canvas repaints original image
+  pixels), text selection via pdf.js TextLayer, search with Persian
+  normalization, zoom, fullscreen, position memory (`ahmadi-reader-pos` in
+  localStorage).
 - `assets/pdf/index.json` — book registry consumed by the reader
   (`?book=<id>`; `?src=<url>` reads any URL). Candidate sources per book:
   local file first, official download URL as fallback.
-- `manifest.json` / `sw.js` — minimal PWA: network-first shell, cache-first
-  assets (book PDFs, images, fonts).
+- `manifest.json` / `sw.js` — minimal PWA: network-first shell, PDFs are
+  network-first (byte-range requests bypass the SW entirely), images/fonts are
+  cache-first. Bump `VERSION` in `sw.js` on every deploy so stale reader JS
+  and cached PDFs are evicted.
 
 ## Conventions
 

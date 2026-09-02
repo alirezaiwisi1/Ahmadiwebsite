@@ -7,7 +7,11 @@
  *  - Already-dark pages are detected and skip inversion.
  *  - Everything runs in the browser; no server, no upload.
  *
- * Rendering: PDF.js (Mozilla) loaded as an ES module from cdnjs.
+ * Rendering: PDF.js (Mozilla) loaded as an ES module from jsDelivr's npm
+ * mirror of `pdfjs-dist` (the full package: build files, `cmaps/`,
+ * `standard_fonts/` and `wasm/`). cdnjs only mirrors the build files, which
+ * is why Persian/Arabic glyph mapping and embedded-font sanitization used to
+ * fail — the supporting data was never configured.
  * Virtual-scroll style rendering: only pages near the viewport keep live
  * canvases; far pages are evicted to keep memory flat on mobile.
  */
@@ -21,7 +25,16 @@ import {
 } from "./pdf-core.js";
 
 const PDFJS_VERSION = "5.4.149";
-const PDFJS_BASE = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${PDFJS_VERSION}/`;
+/* The full pdfjs-dist npm package via jsDelivr (build + cmaps + fonts + wasm).
+   All resource URLs below resolve against this base, so paths work both on
+   the local preview (http://localhost:8080/…) and on the GitHub Pages subpath
+   (https://…/Ahmadiwebsite/…). */
+const PDFJS_BASE = `https://cdn.jsdelivr.net/npm/pdfjs-dist@${PDFJS_VERSION}/`;
+const PDFJS_BUILD = `${PDFJS_BASE}build/`;
+const CMAP_URL = `${PDFJS_BASE}cmaps/`;
+const ICC_URL = `${PDFJS_BASE}iccs/`;
+const STANDARD_FONT_DATA_URL = `${PDFJS_BASE}standard_fonts/`;
+const WASM_URL = `${PDFJS_BASE}wasm/`;
 
 /* Max concurrent page renders (desktop 2, mobile 1). */
 const MAX_CONCURRENT = Math.min((navigator.hardwareConcurrency || 2), 2) >= 2 ? 2 : 1;
@@ -160,7 +173,7 @@ async function resolveBook() {
 
   let books = [];
   try {
-    const res = await fetch("assets/pdf/index.json", { cache: "no-cache" });
+    const res = await fetch(new URL("assets/pdf/index.json", document.baseURI).href, { cache: "no-cache" });
     if (res.ok) books = await res.json();
   } catch { /* offline/fallback below */ }
 
@@ -184,9 +197,25 @@ async function resolveBook() {
 /* ---------- PDF.js bootstrap ---------- */
 
 async function loadPdfjs() {
-  const lib = await import(/* webpackIgnore: true */ PDFJS_BASE + "pdf.min.mjs");
-  lib.GlobalWorkerOptions.workerSrc = PDFJS_BASE + "pdf.worker.min.mjs";
-  return lib;
+  /* Try jsDelivr first (has the full package with cmaps/standard_fonts/wasm),
+     fall back to cdnjs (build-only) if that fails. */
+  const errors = [];
+  const candidates = [
+    PDFJS_BUILD + "pdf.min.mjs",
+    `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${PDFJS_VERSION}/pdf.min.mjs`,
+  ];
+  for (const url of candidates) {
+    try {
+      const lib = await import(/* webpackIgnore: true */ url);
+      lib.GlobalWorkerOptions.workerSrc = PDFJS_BUILD + "pdf.worker.min.mjs";
+      return lib;
+    } catch (err) {
+      errors.push(err);
+    }
+  }
+  throw new Error(
+    "PDF.js could not be loaded after " + errors.length + " CDN sources failed."
+  );
 }
 
 /* ---------- Document loading ---------- */
@@ -215,7 +244,25 @@ async function openDocument(src) {
   const pdfjs = await loadPdfjs();
   state.pdfjs = pdfjs;
 
-  const task = pdfjs.getDocument({ url: src });
+  /* Resolve the book URL absolutely so that loading works identically on the
+     GitHub Pages subpath and on local previews, and to keep range/stream
+     loading unambiguous for the PDF.js network stream. */
+  const absUrl = new URL(src, document.baseURI).href;
+
+  const task = pdfjs.getDocument({
+    url: absUrl,
+    /* Persian/Arabic (and CJK) text needs the Adobe CMaps; embedded-font
+       sanitizing needs OTS/QCMS wasm; standard (non-embedded) fonts need the
+       standard font data. Without these, glyph→Unicode mapping is garbage and
+       some pages fail to render at all. */
+    cMapUrl: CMAP_URL,
+    cMapPacked: true,
+    iccUrl: ICC_URL,
+    standardFontDataUrl: STANDARD_FONT_DATA_URL,
+    wasmUrl: WASM_URL,
+    useSystemFonts: true,
+    enableXfa: true,
+  });
   const doc = await task.promise;
 
   state.doc = doc;
@@ -280,6 +327,13 @@ function showError(err) {
     if (state.book && state.book.download) {
       add(state.book.download, "دانلود مستقیم کتاب", "btn--primary", true);
     }
+    /* Retry: reload the page to clear any stale SW / cached state. */
+    const retry = document.createElement("button");
+    retry.className = "btn btn--primary";
+    retry.textContent = "تلاش دوباره";
+    retry.addEventListener("click", () => location.reload());
+    errorActions.appendChild(retry);
+
     add("index.html", "بازگشت به خانه", "btn--ghost", false);
   }
 

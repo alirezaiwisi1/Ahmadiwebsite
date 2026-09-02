@@ -3,13 +3,20 @@
  * Strategies:
  *  - App shell (HTML/CSS/JS/manifest/fonts): network-first with cache fallback,
  *    so visitors always get the newest version when online.
- *  - Book PDFs + images: cache-first (immutable content, large downloads).
+ *  - Book PDFs: network-first with cache fallback, so a stale full copy is never
+ *    served to PDF.js (which reads books via byte-range requests that bypass
+ *    this worker entirely).
+ *  - Images/fonts: cache-first (immutable content).
+ *
+ * Range requests are intentionally left to the browser's default handling so
+ * partial-content responses for PDF.js reach the network untouched.
  *
  * OCR (Tesseract) is intentionally not included — the reader does not use OCR;
- * PDF.js is fetched from cdnjs and cached opportunistically at runtime.
+ * PDF.js (jsDelivr npm mirror of pdfjs-dist) is cached opportunistically at
+ * runtime.
  */
 
-const VERSION = "ahmadi-v2.0.0";
+const VERSION = "ahmadi-v2.1.0";
 const SHELL_CACHE = VERSION + "-shell";
 const ASSET_CACHE = VERSION + "-assets";
 
@@ -58,7 +65,8 @@ self.addEventListener("activate", (event) => {
   );
 });
 
-/* Range requests (used by PDF.js for large books) must not be cached. */
+/* Range requests (used by PDF.js for large books) must not be intercepted;
+   let the browser handle them natively so partial-content works. */
 function isRangeRequest(request) {
   return request.headers.has("range");
 }
@@ -69,12 +77,34 @@ self.addEventListener("fetch", (event) => {
   if (isRangeRequest(request)) return;
 
   const url = new URL(request.url);
+  const isSameOrigin = url.origin === self.location.origin;
 
-  /* cache-first for local immutable-ish assets (books, images, fonts) */
+  /* Book PDFs: network-first with cache fallback. PDF.js always issues range
+     requests that bypass this handler, so we must never serve a *stale* full
+     copy from cache when online, otherwise byte ranges can mismatch. */
+  if (isSameOrigin && url.pathname.includes("/assets/pdf/")) {
+    event.respondWith(
+      caches.open(ASSET_CACHE).then(async (cache) => {
+        const cached = await cache.match(request);
+        try {
+          const response = await fetch(request);
+          if (response && response.status === 200 && response.headers.get("content-type")?.includes("pdf")) {
+            cache.put(request, response.clone());
+          }
+          return response;
+        } catch (err) {
+          if (cached) return cached;
+          return Response.error();
+        }
+      })
+    );
+    return;
+  }
+
+  /* cache-first for immutable-ish local assets (images, fonts) */
   const isAsset =
-    url.origin === self.location.origin &&
-    (url.pathname.includes("/assets/pdf/") ||
-      url.pathname.includes("/assets/images/") ||
+    isSameOrigin &&
+    (url.pathname.includes("/assets/images/") ||
       url.pathname.includes("/assets/fonts/") ||
       url.pathname.endsWith(".woff2"));
 
