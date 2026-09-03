@@ -3,20 +3,11 @@
  * Strategies:
  *  - App shell (HTML/CSS/JS/manifest/fonts): network-first with cache fallback,
  *    so visitors always get the newest version when online.
- *  - Book PDFs: network-first with cache fallback, so a stale full copy is never
- *    served to PDF.js (which reads books via byte-range requests that bypass
- *    this worker entirely).
+ *  - Book PDFs: network-first with cache fallback.
  *  - Images/fonts: cache-first (immutable content).
- *
- * Range requests are intentionally left to the browser's default handling so
- * partial-content responses for PDF.js reach the network untouched.
- *
- * OCR (Tesseract) is intentionally not included — the reader does not use OCR;
- * PDF.js (jsDelivr npm mirror of pdfjs-dist) is cached opportunistically at
- * runtime.
  */
 
-const VERSION = "ahmadi-v2.1.0";
+const VERSION = "ahmadi-v2.2.0";
 const SHELL_CACHE = VERSION + "-shell";
 const ASSET_CACHE = VERSION + "-assets";
 
@@ -31,12 +22,9 @@ const SHELL_FILES = [
   "./resources.html",
   "./faq.html",
   "./contact.html",
-  "./reader.html",
   "./404.html",
   "./assets/css/style.css",
   "./assets/js/main.js",
-  "./assets/js/pdf-core.js",
-  "./assets/js/pdf-reader.js",
   "./manifest.json",
   "./favicon.svg",
 ];
@@ -65,23 +53,14 @@ self.addEventListener("activate", (event) => {
   );
 });
 
-/* Range requests (used by PDF.js for large books) must not be intercepted;
-   let the browser handle them natively so partial-content works. */
-function isRangeRequest(request) {
-  return request.headers.has("range");
-}
-
 self.addEventListener("fetch", (event) => {
   const request = event.request;
   if (request.method !== "GET") return;
-  if (isRangeRequest(request)) return;
 
   const url = new URL(request.url);
   const isSameOrigin = url.origin === self.location.origin;
 
-  /* Book PDFs: network-first with cache fallback. PDF.js always issues range
-     requests that bypass this handler, so we must never serve a *stale* full
-     copy from cache when online, otherwise byte ranges can mismatch. */
+  /* Book PDFs: network-first with cache fallback. */
   if (isSameOrigin && url.pathname.includes("/assets/pdf/")) {
     event.respondWith(
       caches.open(ASSET_CACHE).then(async (cache) => {
@@ -127,7 +106,7 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  /* network-first for everything else (app shell, cdnjs pdf.js) */
+  /* network-first for everything else (app shell) */
   event.respondWith(
     (async () => {
       try {

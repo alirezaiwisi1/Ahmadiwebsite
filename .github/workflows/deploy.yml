@@ -34,8 +34,7 @@ jobs:
       - name: Site integrity check
         run: |
           for f in index.html assets/css/style.css assets/js/main.js \
-                   assets/js/pdf-core.js assets/js/pdf-reader.js \
-                   assets/pdf/index.json reader.html manifest.json sw.js \
+                   manifest.json sw.js \
                    assets/images/logo.webp robots.txt sitemap.xml; do
             test -f "$f" || { echo "::error::Missing required file: $f"; exit 1; }
           done
@@ -43,13 +42,12 @@ jobs:
       - name: Warn if book PDFs are not bundled
         run: |
           if [ ! -f "assets/pdf/The_Mahdis_Manifesto_Booklet_Farsi.pdf" ]; then
-            echo "::warning::assets/pdf/The_Mahdis_Manifesto_Booklet_Farsi.pdf is missing."
-            echo "::warning::The reader will fall back to the official download URL; add the PDF for a fully in-site experience (see assets/pdf/README.md)."
+            echo "::warning::assets/pdf/The_Mahdis_Manifesto_Booklet_Farsi.pdf is missing. Direct PDF links will not work until the PDF is added (see assets/pdf/README.md)."
           fi
 
       - name: Validate JSON files
         run: |
-          node -e "JSON.parse(require('fs').readFileSync('manifest.json','utf8')); JSON.parse(require('fs').readFileSync('assets/pdf/index.json','utf8'));"
+          node -e "JSON.parse(require('fs').readFileSync('manifest.json','utf8'));"
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
