@@ -5,7 +5,7 @@
   <script>(function(){try{var t=localStorage.getItem("ahmadi-theme");if(!t){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}document.documentElement.setAttribute("data-theme",t);document.documentElement.classList.add("js");}catch(e){document.documentElement.classList.add("js");}})();</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>آموزه‌ها و عهدهای هفت‌گانه | دین صلح و نور احمدی</title>
-  <meta name="description" content="آموزه‌های دین صلح و نور احمدی بر پایه مانیفست مهدی؛ سه معیار شناخت حجت — وصیت، علم، پرچم — و شرح عهدهای هفت‌گانه خدا با انسان از آدم تا احمد الحسن.">
+  <meta name="description" content="خانهٔ اصلی آموزه‌های دین صلح و نور احمدی: سه معیار شناخت حجت — وصیت، علم، پرچم — عهدهای هفت‌گانه، روح و تناسخ، ماهیت واقعیت، اخلاق و دولت عدل الهی؛ برگرفته از مانیفست مهدی و هدف حکیم.">
   <link rel="canonical" href="https://alirezaiwisi1.github.io/Ahmadiwebsite/teachings.html">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fa_IR">
@@ -51,6 +51,7 @@
     <symbol id="ic-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></symbol>
     <symbol id="ic-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><line x1="12" y1="1.5" x2="12" y2="3.5"/><line x1="12" y1="20.5" x2="12" y2="22.5"/><line x1="4.6" y1="4.6" x2="6" y2="6"/><line x1="18" y1="18" x2="19.4" y2="19.4"/><line x1="1.5" y1="12" x2="3.5" y2="12"/><line x1="20.5" y1="12" x2="22.5" y2="12"/><line x1="4.6" y1="19.4" x2="6" y2="18"/><line x1="18" y1="6" x2="19.4" y2="4.6"/></g></symbol>
     <symbol id="ic-star8" viewBox="0 0 24 24"><path fill="currentColor" d="M22 12 17.1 14.1 19.1 19.1 14.1 17.1 12 22 9.9 17.1 4.9 19.1 6.9 14.1 2 12 6.9 9.9 4.9 4.9 9.9 6.9 12 2 14.1 6.9 19.1 4.9 17.1 9.9Z"/></symbol>
+<symbol id="ic-yt" viewBox="0 0 24 24"><path fill="currentColor" d="M23.5 6.2c-.3-1-1.1-1.8-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6c-1 .3-1.8 1.1-2.1 2.1C0 8.1 0 12 0 12s0 3.9.5 5.8c.3 1 1.1 1.8 2.1 2.1 1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6c1-.3 1.8-1.1 2.1-2.1.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.5 15.5V8.5l6.3 3.5-6.3 3.5z"/></symbol>
   </svg>
 
   <div class="reading-progress" aria-hidden="true"><span></span></div>
@@ -66,15 +67,31 @@
           <span class="site-nav__toggle-bars" aria-hidden="true"></span>
         </button>
         <ul class="site-nav__list" id="primary-menu">
-          <li><a href="index.html">خانه</a></li>
+          <li class="nav-home"><a href="index.html">خانه</a></li>
           <li><a href="about.html">آشنایی با دین</a></li>
           <li><a href="teachings.html" aria-current="page">آموزه‌ها</a></li>
           <li><a href="mahdi.html">مهدی</a></li>
           <li><a href="resources.html">کتاب‌ها و منابع</a></li>
-          <li><a href="faq.html">پرسش‌های متداول</a></li>
-          <li><a href="contact.html">ارتباط</a></li>
-          <li><a class="nav-tg" href="https://t.me/theahmadireligionfarsi" target="_blank" rel="noopener" aria-label="گروه تلگرام دین صلح و نور احمدی — باز شدن در تلگرام"><svg class="ic" aria-hidden="true"><use href="#ic-tg"/></svg>گروه تلگرام</a></li>
+          <li class="nav-sec"><a href="faq.html">پرسش‌های متداول</a></li>
+          <li class="nav-sec"><a href="contact.html">ارتباط</a></li>
+          <li class="nav-more-wrap">
+            <button class="nav-more-btn" type="button" aria-expanded="false" aria-haspopup="true">
+              بیشتر <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="nav-more-dropdown">
+              <a href="faq.html">پرسش‌های متداول</a>
+              <a href="contact.html">ارتباط</a>
+              <a href="manifesto.html">مانیفست مهدی</a>
+              <a href="wisdom.html">هدف حکیم</a>
+            </div>
+          </li>
+          <li class="nav-social-item"><a class="nav-tg" href="https://t.me/theahmadireligionfarsi" target="_blank" rel="noopener" aria-label="گروه تلگرام دین صلح و نور احمدی — باز شدن در تلگرام"><svg class="ic" aria-hidden="true"><use href="#ic-tg"/></svg>گروه تلگرام</a></li>
+          <li class="nav-social-item"><a class="nav-tg" href="https://youtube.com/@ahmadireligion_fa" target="_blank" rel="noopener" aria-label="کانال یوتیوب فارسی دین صلح و نور احمدی — باز شدن در یوتیوب"><svg class="ic" aria-hidden="true"><use href="#ic-yt"/></svg>یوتیوب فارسی</a></li>
         </ul>
+        <div class="nav-social">
+          <a href="https://t.me/theahmadireligionfarsi" target="_blank" rel="noopener" aria-label="گروه تلگرام دین صلح و نور احمدی"><svg class="ic" aria-hidden="true"><use href="#ic-tg"/></svg></a>
+          <a href="https://youtube.com/@ahmadireligion_fa" target="_blank" rel="noopener" aria-label="کانال یوتیوب فارسی دین صلح و نور احمدی"><svg class="ic" aria-hidden="true"><use href="#ic-yt"/></svg></a>
+        </div>
       </nav>
       <button class="theme-toggle" id="theme-toggle" type="button" aria-label="تغییر پوسته روشن و تاریک" aria-pressed="false">
         <svg class="ic theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true"><use href="#ic-moon"/></svg>
@@ -94,10 +111,8 @@
     <section class="page-header container">
       <h1>آموزه‌ها و عهدهای هفت‌گانه</h1>
       <p class="lead">
-        اگر خداوند برای هدایت انسان حجت‌هایی برمی‌گزیند، این حجت‌ها چگونه شناخته می‌شوند و هر عهد چگونه
-        باز می‌شود؟ در این نگاه، تاریخ هدایت الهی در قالب هفت عهد میان خدا و انسان روایت می‌شود؛ هر عهد
-        به دست شخصیتی برگزیده گشوده شده است. این صفحه نقشه‌ی همان روایت است؛ شرح کامل آن در متن
-        «مانیفست مهدی» جای دارد.
+        این صفحه خانهٔ اصلی آموزه‌های این دعوت است: سه معیار شناخت حجت، روایت عهدهای هفت‌گانه از آدم تا
+        عهد هفتم، و موضوع‌هایی که «هدف حکیم» به آن‌ها می‌پردازد — از روح و تناسخ تا اخلاق و دولت عدل.
       </p>
     </section>
 
@@ -105,8 +120,8 @@
       <div class="container">
         <div class="notice">
           <p>
-            این صفحه نقشه ورود به متن اصلی است؛ استدلال‌ها، آیه‌ها و روایت‌های کامل، در خودِ
-            «مانیفست مهدی» جای دارند.
+            آنچه این‌جا می‌خوانید چکیده‌ای از دو متن اصلی است؛ استدلال‌ها، آیه‌ها و روایت‌های کامل،
+            در خودِ «مانیفست مهدی» و «هدف حکیم» جای دارند.
           </p>
         </div>
       </div>
@@ -364,7 +379,105 @@
               می‌کند. در میان مؤمنان داد و ستد پولی نیست و نیازهای همه برآورده می‌شود. «خلق
               خانوادهٔ خدایند و بهترین شما بهترینِ شما به خلق خداست» (وسائل الشیعة).
             </p>
+            <span class="source-ref">منبع: مانیفست مهدی، فصل سوم.</span>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament" aria-hidden="true"><svg class="ic"><use href="#ic-star8"/></svg></div>
+
+    <section class="section section--alt" aria-labelledby="soul-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="soul-title">روح، تناسخ و خانوادهٔ روحی</h2>
+          <p>«هدف حکیم» به پرسش‌هایی می‌پردازد که در متون پیشین مبهم مانده بود: روح چیست و سرگذشت آن در جهان‌های پیش از این دنیا چه بود؟</p>
+        </div>
+        <div class="measure" style="margin-inline: auto;">
+          <p>
+            در این کتاب، با پاسخ به آیهٔ «از شما دربارهٔ روح می‌پرسند؛ بگو روح از امر پروردگار من است
+            و به شما جز اندکی از دانش داده نشده است» (قرآن، اسراء ۸۵)، در موضوع روح روشن‌سازی
+            می‌شود. یکی از نشانه‌های بزرگ مرجعیت الهی در این روایت، روشن‌کردن معنای «رجعت» است —
+            بازگشت یا تناسخِ ارواح به این جهان.
+          </p>
+          <p>
+            کتاب می‌گوید آنچه برای آدم رخ داده در سطحی ژرف‌تر معنا دارد: آموختنِ «نام همه چیز» به
+            آدم، در این نگاه، آگاه‌کردن او از هویت‌های روحانی، تجسم‌ها و تناسخ‌های فرشتگان بوده است —
+            نه صرفاً نام‌گذاری موجودات. فرشتگان می‌دانستند که پیش‌تر تجسم‌هایی داشته‌اند، اما
+            نمی‌دانستند آن تجسم‌ها چه بوده‌اند؛ و همین پرسش دربارهٔ هویت روحی، پرسش مؤمنان امروز نیز
+            هست.
+          </p>
+          <p>
+            در کنار تناسخ، کتاب از «خانوادهٔ روحی» سخن می‌گوید: پیوندهایی میان ارواح که فراتر از
+            پیوندهای جسمانی است و در روایت‌های کتاب، آدم خود را فرزندِ روحیِ علی بن ابی‌طالب
+            می‌یابد — پیوندی که در «جهان روح» و پیش از آفرینش جسمانی شکل گرفته است.
+          </p>
+          <span class="source-ref">منبع: هدف حکیم، در نخست؛ پیشگفتار کتاب.</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament" aria-hidden="true"><svg class="ic"><use href="#ic-star8"/></svg></div>
+
+    <section class="section" aria-labelledby="reality-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="reality-title">ماهیت واقعیت؛ نور، ظلمت و نفس انسانی</h2>
+          <p>درهای میانی کتاب به پرسش از چیستیِ هستی و جایگاه انسان در آن می‌پردازند.</p>
+        </div>
+        <div class="card-grid card-grid--3">
+          <article class="card" data-reveal>
+            <h3>ماهیت واقعیت</h3>
+            <p>
+              این جهان در روایت کتاب تنها بخشی از واقعیت است؛ پشت آن، جهان‌های روحی و نیروهای ناپدیدی
+              است که بر زندگی انسان اثر می‌گذارند — از فرشتگان مقرب و جن تا حقیقت مرگ و بهشت و
+              دوزخ. شناخت این لایه‌ها، بخشی از «دانشِ غیب» است که حجت خدا با آن معرفی می‌شود.
+            </p>
+          </article>
+          <article class="card" data-reveal>
+            <h3>نور و ظلمت</h3>
+            <p>
+              در این نگاه، تاریکیِ جهان‌های مادی در برابر نور الهی معنا می‌یابد. مسیر انسان، مسیرِ
+              گذر از ظلمتِ خودپسندی به سوی نور است؛ و پارسایانِ هر دوره، حاملانِ بخشی از همان نور
+              واحد معرفی می‌شوند که از آدم تا محمد و خاندان او پیوسته بوده است.
+            </p>
+          </article>
+          <article class="card" data-reveal>
+            <h3>نفس انسانی</h3>
+            <p>
+              بزرگ‌ترین مانعِ راه، «خودِ» انسانی است. کتاب از انسان می‌خواهد که همین مانع را کاهنده
+              باشد تا نور الهی در او بیشتر بتابد؛ برآیندِ این مسیر، تجلّی صفات الهی در آفرینش است —
+              همان مقامی که در کتاب «خدا در آفرینش شدن» نامیده می‌شود.
+            </p>
+          </article>
+        </div>
+        <div class="notice" style="margin-top: var(--space-5);">
+          <p>شرح کامل این موضوع‌ها، همراه با استدلال‌ها و ارجاع‌ها، در خودِ «هدف حکیم» آمده است — <a href="wisdom.html">معرفی کتاب</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament" aria-hidden="true"><svg class="ic"><use href="#ic-star8"/></svg></div>
+
+    <section class="section section--alt" aria-labelledby="morals-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="morals-title">اخلاق و آداب در عهد هفتم</h2>
+          <p>در یکی از درهای کتاب، راهنماهای عملیِ سلوک برای مؤمنان عهد هفتم برشمرده می‌شود.</p>
+        </div>
+        <div class="measure" style="margin-inline: auto;">
+          <p>
+            مانند همهٔ پیامبران که برای تربیت منش و اخلاق انسان‌ها برانگیخته شدند، کتاب نیز درِ
+            «اخلاق و آداب» را به راهنمایی‌های عملی اختصاص داده است: راستگویی، امانت‌داری، دوری از
+            غیبت و حسد، خدمت به خلقِ خدا و احترام به همهٔ انسان‌ها. این راهنماها، تجلیِ همان ارزش‌هایی
+            است که در جامعهٔ مؤمنان به مثابهٔ یک خانواده باید روزمره و عملی شود.
+          </p>
+          <p>
+            در همین راستاست که از احمد الحسن در کتاب نقل شده: «دولت عدل الهی هرگز برپا نمی‌شود مگر
+            آنکه نخست در میان خودِ مؤمنان برپا شود» — یعنی اصلاحِ درونِ جامعه، پیش‌شرط هر دگرگونی
+            بیرونی است.
+          </p>
+          <span class="source-ref">منبع: هدف حکیم، در اخلاق و آداب؛ مانیفست مهدی، فصل سوم.</span>
         </div>
       </div>
     </section>
@@ -372,11 +485,11 @@
     <section class="section" aria-labelledby="cta-title">
       <div class="container">
         <div class="cta-panel">
-          <h2 id="cta-title">شرح کامل، در خودِ متن</h2>
-          <p>مانیفست مهدی را همین‌جا مطالعه کنید یا دریافت کنید؛ هم مطالعه آنلاین و هم دانلود مستقیم و نسخه تلگرام در دسترس است.</p>
+          <h2 id="cta-title">شرح کامل، در خودِ متن‌ها</h2>
+          <p>مانیفست مهدی و هدف حکیم را همین‌جا مطالعه کنید؛ هم مطالعه آنلاین و هم دانلود مستقیم در دسترس است.</p>
           <div class="btn-row">
-            <a class="btn btn--light" href="assets/pdf/The_Mahdis_Manifesto_Booklet_Farsi.pdf" target="_blank" rel="noopener noreferrer"><svg class="ic" aria-hidden="true"><use href="#ic-reader"/></svg> مطالعه آنلاین</a>
-            <a class="btn btn--outline-light" href="https://theahmadireligion.org/download/42616/?tmstv=1765124110" target="_blank" rel="noopener" aria-label="دانلود مستقیم مانیفست مهدی — باز شدن در وب‌سایت رسمی">دانلود مستقیم مانیفست ↗</a>
+            <a class="btn btn--light" href="assets/pdf/The_Mahdis_Manifesto_Booklet_Farsi.pdf" target="_blank" rel="noopener noreferrer"><svg class="ic" aria-hidden="true"><use href="#ic-reader"/></svg> مطالعه مانیفست مهدی</a>
+            <a class="btn btn--outline-light" href="assets/pdf/The-Goal-of-the-Wise-Persian.pdf" target="_blank" rel="noopener noreferrer">مطالعه هدف حکیم</a>
           </div>
         </div>
       </div>
@@ -393,7 +506,11 @@
         <p class="site-footer__desc">
           وب‌سایت معرفی «دین صلح و نور احمدی»؛ برای آشنایی با آموزه‌های این دعوت، مطالعه منابع اصلی و ارتباط با جامعه فارسی‌زبان.
         </p>
-        <a class="btn btn--gold" href="https://t.me/theahmadireligionfarsi" target="_blank" rel="noopener" aria-label="گروه تلگرام دین صلح و نور احمدی — باز شدن در تلگرام"><svg class="ic" aria-hidden="true"><use href="#ic-tg"/></svg> گروه تلگرام دین صلح و نور احمدی</a>
+        <div class="site-footer__social">
+          <a href="https://t.me/theahmadireligionfarsi" target="_blank" rel="noopener" aria-label="گروه تلگرام دین صلح و نور احمدی"><svg class="ic" aria-hidden="true"><use href="#ic-tg"/></svg> تلگرام</a>
+          <a href="https://youtube.com/@ahmadireligion_fa" target="_blank" rel="noopener" aria-label="کانال یوتیوب فارسی دین صلح و نور احمدی"><svg class="ic" aria-hidden="true"><use href="#ic-yt"/></svg> یوتیوب فارسی</a>
+          <a href="https://youtube.com/@themahdihasappeared" target="_blank" rel="noopener" aria-label="The Mahdi Has Appeared YouTube channel"><svg class="ic" aria-hidden="true"><use href="#ic-yt"/></svg> English YouTube</a>
+        </div>
       </div>
       <nav aria-label="ناوبری پابرگ">
         <h3 class="site-footer__heading">صفحه‌ها</h3>

@@ -405,6 +405,83 @@ a:hover { color: var(--color-brand); }
   transform: translateY(-1px);
 }
 
+/* ---------- More dropdown (tablet compact nav) ---------- */
+.nav-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.7rem;
+  border-radius: var(--radius-s);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-ink);
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.93rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color var(--speed) ease, border-color var(--speed) ease;
+}
+.nav-more-btn:hover {
+  background: var(--color-brand-soft);
+  border-color: var(--color-brand);
+  color: var(--color-brand-strong);
+}
+.nav-more-btn svg { width: 1.15em; height: 1.15em; }
+
+.nav-more-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  inset-inline-end: 0;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-s);
+  box-shadow: var(--shadow-m);
+  padding: var(--space-2);
+  min-width: 12rem;
+  z-index: 70;
+  animation: nav-drop 200ms var(--ease-out);
+}
+.nav-more-dropdown.is-open { display: block; }
+.nav-more-dropdown a {
+  display: block;
+  padding: 0.55rem 0.8rem;
+  border-radius: var(--radius-s);
+  text-decoration: none;
+  color: var(--color-ink);
+  font-weight: 600;
+  font-size: 0.93rem;
+  white-space: nowrap;
+  transition: background-color var(--speed) ease;
+}
+.nav-more-dropdown a:hover { background: var(--color-brand-soft); color: var(--color-brand-strong); }
+
+.nav-more-wrap { position: relative; display: none; }
+
+/* ---------- Social icons in header ---------- */
+.nav-social {
+  display: none;
+  align-items: center;
+  gap: 0.2rem;
+}
+.nav-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  color: var(--color-muted);
+  transition: color var(--speed) ease, background-color var(--speed) ease;
+  text-decoration: none;
+}
+.nav-social a:hover {
+  color: var(--color-brand-strong);
+  background: var(--color-brand-soft);
+}
+.nav-social svg { width: 1.15rem; height: 1.15rem; }
+
 /* ---------- Theme toggle ---------- */
 .theme-toggle {
   display: inline-flex;
@@ -1404,7 +1481,67 @@ html:not([data-theme="dark"]) .theme-toggle__icon--moon,
   .site-footer__meta { text-align: start; }
 }
 
-@media (min-width: 64em) {
+/* ---------- Tablet compact nav (768–1099px) ---------- */
+@media (min-width: 48em) and (max-width: 68.74em) {
+  .site-nav__toggle { display: none; }
+
+  .site-nav__list {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.15rem;
+    position: static;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+    animation: none;
+  }
+
+  .site-nav__list a {
+    position: relative;
+    padding: 0.45rem 0.6rem;
+    font-size: 0.88rem;
+    white-space: nowrap;
+    border-radius: var(--radius-s);
+  }
+
+  .site-nav__list a::after {
+    content: "";
+    position: absolute;
+    inset-inline: 0.6rem;
+    bottom: 0.15rem;
+    height: 2px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--color-brand-bright), var(--color-brand));
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform var(--speed) var(--ease-out);
+  }
+
+  .site-nav__list a:hover::after,
+  .site-nav__list a[aria-current="page"]::after { transform: scaleX(1); }
+
+  .site-nav__list a:hover { background: transparent; }
+
+  .site-nav__list a[aria-current="page"] {
+    background: transparent;
+    color: var(--color-brand-strong);
+  }
+
+  /* compact nav: hide home (brand links home), secondary pages and the
+     text social buttons; icons + "More" dropdown take their place */
+  .site-nav__list > .nav-home,
+  .site-nav__list > .nav-sec,
+  .site-nav__list > .nav-social-item { display: none; }
+
+  .nav-more-wrap { display: block; }
+  .nav-more-btn { font-size: 0.88rem; }
+  .nav-social { display: inline-flex; }
+}
+
+/* ---------- Desktop full nav (>= 1100px) ---------- */
+@media (min-width: 68.75em) {
   .site-nav__toggle { display: none; }
 
   .site-nav__list {
@@ -1451,7 +1588,10 @@ html:not([data-theme="dark"]) .theme-toggle__icon--moon,
     color: var(--color-brand-strong);
   }
 
-  .nav-tg { margin-inline-start: 0.5rem; padding: 0.45rem 1rem !important; }
+  /* full nav: icon-only social buttons replace the text buttons */
+  .site-nav__list > .nav-social-item { display: none; }
+
+  .nav-social { display: inline-flex; margin-inline-start: 0.4rem; }
 }
 
 @media (min-width: 75em) {
@@ -1473,6 +1613,32 @@ html:not([data-theme="dark"]) .theme-toggle__icon--moon,
 
 /* ---------- Skip-link focus target ---------- */
 #main-content:focus { outline: none; }
+
+/* ---------- Footer social ---------- */
+.site-footer__social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-block: var(--space-3);
+}
+.site-footer__social a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-pill);
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: background-color var(--speed) ease, color var(--speed) ease;
+}
+.site-footer__social a:hover {
+  background: rgba(249, 115, 22, 0.25);
+  color: var(--color-brand-bright);
+}
+.site-footer__social svg { width: 1.1rem; height: 1.1rem; }
 
 /* ---------- Print ---------- */
 @media print {

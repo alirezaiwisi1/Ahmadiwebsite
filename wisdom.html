@@ -5,7 +5,7 @@
   <script>(function(){try{var t=localStorage.getItem("ahmadi-theme");if(!t){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}document.documentElement.setAttribute("data-theme",t);document.documentElement.classList.add("js");}catch(e){document.documentElement.classList.add("js");}})();</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>هدف حکیم | دین صلح و نور احمدی</title>
-  <meta name="description" content="معرفی کتاب «هدف حکیم»؛ کتاب بنیادین دین صلح و نور احمدی به قلم عبدالله هاشم (ابا الصادق) و راه‌های دریافت کتاب و خوانش صوتی آن.">
+  <meta name="description" content="معرفی کتاب «هدف حکیم» — انجیل قائم آل محمد؛ پیشگفتار، چهل و دو در، موضوع‌های محوری چون تناسخ و خانواده روحی، و راه‌های مطالعه آنلاین و دانلود.">
   <link rel="canonical" href="https://alirezaiwisi1.github.io/Ahmadiwebsite/wisdom.html">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fa_IR">
@@ -53,6 +53,7 @@
     <symbol id="ic-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></symbol>
     <symbol id="ic-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><line x1="12" y1="1.5" x2="12" y2="3.5"/><line x1="12" y1="20.5" x2="12" y2="22.5"/><line x1="4.6" y1="4.6" x2="6" y2="6"/><line x1="18" y1="18" x2="19.4" y2="19.4"/><line x1="1.5" y1="12" x2="3.5" y2="12"/><line x1="20.5" y1="12" x2="22.5" y2="12"/><line x1="4.6" y1="19.4" x2="6" y2="18"/><line x1="18" y1="6" x2="19.4" y2="4.6"/></g></symbol>
     <symbol id="ic-star8" viewBox="0 0 24 24"><path fill="currentColor" d="M22 12 17.1 14.1 19.1 19.1 14.1 17.1 12 22 9.9 17.1 4.9 19.1 6.9 14.1 2 12 6.9 9.9 4.9 4.9 9.9 6.9 12 2 14.1 6.9 19.1 4.9 17.1 9.9Z"/></symbol>
+<symbol id="ic-yt" viewBox="0 0 24 24"><path fill="currentColor" d="M23.5 6.2c-.3-1-1.1-1.8-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6c-1 .3-1.8 1.1-2.1 2.1C0 8.1 0 12 0 12s0 3.9.5 5.8c.3 1 1.1 1.8 2.1 2.1 1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6c1-.3 1.8-1.1 2.1-2.1.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.5 15.5V8.5l6.3 3.5-6.3 3.5z"/></symbol>
   </svg>
 
   <div class="reading-progress" aria-hidden="true"><span></span></div>
@@ -68,15 +69,31 @@
           <span class="site-nav__toggle-bars" aria-hidden="true"></span>
         </button>
         <ul class="site-nav__list" id="primary-menu">
-          <li><a href="index.html">خانه</a></li>
+          <li class="nav-home"><a href="index.html">خانه</a></li>
           <li><a href="about.html">آشنایی با دین</a></li>
           <li><a href="teachings.html">آموزه‌ها</a></li>
           <li><a href="mahdi.html">مهدی</a></li>
-          <li><a href="resources.html">کتاب‌ها و منابع</a></li>
-          <li><a href="faq.html">پرسش‌های متداول</a></li>
-          <li><a href="contact.html">ارتباط</a></li>
-          <li><a class="nav-tg" href="https://t.me/theahmadireligionfarsi" target="_blank" rel="noopener" aria-label="گروه تلگرام دین صلح و نور احمدی — باز شدن در تلگرام"><svg class="ic" aria-hidden="true"><use href="#ic-tg"/></svg>گروه تلگرام</a></li>
+          <li><a href="resources.html" aria-current="page">کتاب‌ها و منابع</a></li>
+          <li class="nav-sec"><a href="faq.html">پرسش‌های متداول</a></li>
+          <li class="nav-sec"><a href="contact.html">ارتباط</a></li>
+          <li class="nav-more-wrap">
+            <button class="nav-more-btn" type="button" aria-expanded="false" aria-haspopup="true">
+              بیشتر <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="nav-more-dropdown">
+              <a href="faq.html">پرسش‌های متداول</a>
+              <a href="contact.html">ارتباط</a>
+              <a href="manifesto.html">مانیفست مهدی</a>
+              <a href="wisdom.html">هدف حکیم</a>
+            </div>
+          </li>
+          <li class="nav-social-item"><a class="nav-tg" href="https://t.me/theahmadireligionfarsi" target="_blank" rel="noopener" aria-label="گروه تلگرام دین صلح و نور احمدی — باز شدن در تلگرام"><svg class="ic" aria-hidden="true"><use href="#ic-tg"/></svg>گروه تلگرام</a></li>
+          <li class="nav-social-item"><a class="nav-tg" href="https://youtube.com/@ahmadireligion_fa" target="_blank" rel="noopener" aria-label="کانال یوتیوب فارسی دین صلح و نور احمدی — باز شدن در یوتیوب"><svg class="ic" aria-hidden="true"><use href="#ic-yt"/></svg>یوتیوب فارسی</a></li>
         </ul>
+        <div class="nav-social">
+          <a href="https://t.me/theahmadireligionfarsi" target="_blank" rel="noopener" aria-label="گروه تلگرام دین صلح و نور احمدی"><svg class="ic" aria-hidden="true"><use href="#ic-tg"/></svg></a>
+          <a href="https://youtube.com/@ahmadireligion_fa" target="_blank" rel="noopener" aria-label="کانال یوتیوب فارسی دین صلح و نور احمدی"><svg class="ic" aria-hidden="true"><use href="#ic-yt"/></svg></a>
+        </div>
       </nav>
       <button class="theme-toggle" id="theme-toggle" type="button" aria-label="تغییر پوسته روشن و تاریک" aria-pressed="false">
         <svg class="ic theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true"><use href="#ic-moon"/></svg>
@@ -96,8 +113,8 @@
     <section class="page-header container">
       <h1>هدف حکیم</h1>
       <p class="lead">
-        «هدف حکیم» از کتاب‌های بنیادین دین صلح و نور احمدی است؛ در کنار «مانیفست مهدی» جایگاه اصلی
-        دارد و به عبدالله هاشم (ابا الصادق) نسبت داده شده است.
+        «هدف حکیم» کتابی است که این دعوت آن را ادامه و روشن‌ساز ارتباط‌های پیشین میان خدا و انسان می‌داند؛
+        نوشته عبدالله هاشم (ابا الصادق) و پشتیبانِ مقامِ ولایتِ امام مهدی و احمد الحسن.
       </p>
     </section>
 
@@ -108,21 +125,23 @@
             <img src="assets/images/hadaf-hakim-persian.webp" alt="جلد کتاب هدف حکیم" width="600" height="800">
           </div>
           <div>
-            <h2 id="what-title">هدف حکیم</h2>
+            <h2 id="what-title">هدف حکیم — انجیل قائم آل محمد</h2>
             <ul class="book-facts">
               <li><strong>نویسنده:</strong> عبدالله هاشم (ابا الصادق)</li>
-              <li><strong>دسترسی:</strong> دانلود مستقیم، نسخه تلگرام و خوانش صوتی</li>
+              <li><strong>نشر اول:</strong> دسامبر ۲۰۲۲ — دین صلح و نور احمدی</li>
+              <li><strong>شابک:</strong> 978-1-7392629-0-7</li>
             </ul>
             <div class="measure">
               <p>
-                «هدف حکیم» کتابی است برای شناخت آموزه‌های این دین؛ نوشته عبدالله هاشم (ابا الصادق)،
-                رهبر معرفی‌شده این دعوت در عصر حاضر. آنچه در این صفحه می‌خوانید راهنمای دسترسی به
-                کتاب است؛ خودِ متن، شرح کامل آموزه‌ها را در بر دارد.
+                «هدف حکیم» در چهل و دو «در» سامان یافته است. عنوان کتاب از واژه عربی «غایة» گرفته شده
+                — به معنای هدف و غایت نهایی — و پرسشی را پیش می‌کشد که هر دین و فلسفه‌ای کوشیده به آن
+                پاسخ دهد: هدف نهایی چیست؟
               </p>
               <p>
-                برای آشنایی با چارچوب مشترک آموزه‌های این دعوت — عهدهای الهی و سه معیار شناخت حجت —
-                صفحه <a href="teachings.html">آموزه‌ها</a> را ببینید؛ شرح درون‌مایه کتاب در خودِ متن آن
-                آمده است.
+                کتاب خود را ادامه و روشن‌ساز کتاب‌های پیشین معرفی می‌کند و بر این ادعا استوار است که
+                با همان سه معیار شناخته می‌شود که پیامبران پیشین: وصیت — دانش الهی — و فراخوان به
+                فرمانروایی خدا. آنچه این کتاب را از کتاب‌های مقدس موجود متمایز می‌کند، دسترسی زنده به
+                نویسندگان آن است: کسانی که می‌توان پرسش‌ها را با آن‌ها در میان گذاشت و روشن‌ساخت.
               </p>
             </div>
             <div class="book-actions">
@@ -138,26 +157,175 @@
 
     <div class="ornament" aria-hidden="true"><svg class="ic"><use href="#ic-star8"/></svg></div>
 
-    <section class="section section--alt" aria-labelledby="start-title">
+    <section class="section section--alt" aria-labelledby="foreword-title">
       <div class="container">
         <div class="section-head">
-          <h2 id="start-title">از کجا آغاز کنیم؟</h2>
-          <p>پیشنهاد ما برای ورود به این کتاب:</p>
+          <h2 id="foreword-title">پیشگفتار کتاب — سخنی با خواننده</h2>
+          <p>پیشگفتار «هدف حکیم» تصویری کلی از مسئله‌ای را ترسیم می‌کند که کتاب در پی پاسخ به آن است.</p>
         </div>
-        <ol class="steps">
-          <li data-reveal>
-            <h3>با مانیفست مهدی آشنا شوید</h3>
-            <p>«هدف حکیم» و «مانیفست مهدی» هر دو از کتاب‌های بنیادین این دعوت‌اند؛ آشنایی نخست با مانیفست مهدی راه را بازتر می‌کند.</p>
-          </li>
-          <li data-reveal>
-            <h3>مطالعه مستقیم</h3>
-            <p>برای آشنایی جدی، مطالعه مستقیم متن کتاب توصیه می‌شود؛ این صفحه تنها راهنمای دسترسی است.</p>
-          </li>
-          <li data-reveal>
-            <h3>با خوانش صوتی دنبال کنید</h3>
-            <p>نسخه صوتی این کتاب نیز در تلگرام در دسترس است تا مطالعه و شنیدن را در کنار هم پیش ببرید.</p>
-          </li>
-        </ol>
+        <div class="measure" style="margin-inline: auto;">
+          <p>
+            کتاب‌های مقدسِ موجود، در این نگاه، همگی پس از درگذشت نویسندگان اصلی‌شان گردآوری شده‌اند.
+            آنچه آغازگر ارتباطی چهره‌به‌چهره و سرشار از معنا بوده، به کلماتی خشک و جداافتاده از بافت
+            اصلی تبدیل شده است. پرسش‌های بنیادینی بی‌پاسخ مانده: این کلمات چگونه ادا شدند؟ بافت و
+            زمینه چه بود؟ رابطه میان گوینده و شنونده چگونه بود؟
+          </p>
+          <p>
+            کتاب استدلال می‌کند که این شکاف در ارتباط — میان برگزیدگان خدا و پیروانشان — به
+            سردرگمی و ناآگاهی انجامیده و بسیاری از کشمکش‌های دینیِ تاریخ از همین جا سرچشمه گرفته:
+            نبرد بر سر تفسیر درستِ کلام خدا.
+          </p>
+          <p>
+            «هدف حکیم» خود را پاسخی به این مسئله می‌داند: کتابی زنده با نویسندگانی که می‌توان
+            مستقیماً به آن‌ها دسترسی داشت. در پیشگفتار، از خواننده خواسته شده خود به داوری بنشیند
+            و بپرسد: آیا این دانش از سوی خداست؟
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament" aria-hidden="true"><svg class="ic"><use href="#ic-star8"/></svg></div>
+
+    <section class="section" aria-labelledby="doors-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="doors-title">چهل و دو در</h2>
+          <p>کتاب در چهل و دو «در» (فصل) سازمان یافته است که هر یک به موضوعی از آموزه‌های این دعوت می‌پردازد.</p>
+        </div>
+        <div class="card-grid card-grid--3">
+          <article class="card" data-reveal>
+            <h3>درهای ۱–۷: عهدهای هفت‌گانه</h3>
+            <p>از عهد نخست با آدم تا عهد هفتم با احمد الحسن — شرح هر یک از عهدها، شریعت و قانون نوین آن. این بخش بنیادِ روایت کتاب است.</p>
+            <a class="card__link" href="teachings.html">عهدها در صفحه آموزه‌ها</a>
+          </article>
+          <article class="card" data-reveal>
+            <h3>درهای ۸–۱۶: کیهان‌شناسی و خودشناسی</h3>
+            <p>اجرام آسمانی، تناسخ (رجعت)، انتقال نفس، خانواده روحی، حقیقت مصلوب شدن عیسی، رستاخیز، ماهیت واقعیت، نور و ظلمت، و نفس انسانی.</p>
+          </article>
+          <article class="card" data-reveal>
+            <h3>درهای ۱۷–۲۶: نیروهای ناپیدا</h3>
+            <p>فرشتگان مقرب، جن، مرگ، بهشت و دوزخ، سرچشمه شر، کارما، حقیقت خاطرات، رؤیاها و تخیلات، حیات بیگانه و فرازمینی، مسخ و شگفتی‌های جهان جانوران.</p>
+          </article>
+          <article class="card" data-reveal>
+            <h3>درهای ۲۷–۳۳: کتاب و تاریخ</h3>
+            <p>کلمات ناقص، اخلاق و آداب، تحریف قرآن، رویدادهای ظهور، سال‌های گمشده عیسی مسیح، دجال و بافومت، و دولت عدل الهی.</p>
+          </article>
+          <article class="card" data-reveal>
+            <h3>درهای ۳۴–۳۹: شخصیت‌ها و رویدادها</h3>
+            <p>قائم، یمانی، امام مهدی، داستان چهل مرد، آزمایش‌ها، و مصر — سرزمین وعده‌.</p>
+          </article>
+          <article class="card" data-reveal>
+            <h3>در ۴۰: وصیت ابا الصادق</h3>
+            <p>وصیت‌نامه عبدالله هاشم (ابا الصادق) — وصیتی که سنت پیامبران در آن ادامه یافته است.</p>
+          </article>
+        </div>
+        <div class="notice" style="margin-top: var(--space-5);">
+          <p>هر یک از این موضوع‌ها در کتاب با استناد به قرآن، تورات، انجیل و روایات اسلامی شرح داده شده است. برای آشنایی با چارچوب مشترک این آموزه‌ها، صفحه <a href="teachings.html">آموزه‌ها</a> را ببینید.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament" aria-hidden="true"><svg class="ic"><use href="#ic-star8"/></svg></div>
+
+    <section class="section section--alt" aria-labelledby="themes-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="themes-title">چند موضوع محوری</h2>
+          <p>در میان موضوع‌های گسترده کتاب، چند محور برجسته‌ترند:</p>
+        </div>
+        <div class="card-grid card-grid--3">
+          <article class="card" data-reveal>
+            <span class="card__icon" aria-hidden="true"><svg class="ic"><use href="#ic-star8"/></svg></span>
+            <h3>کلمات ناقص</h3>
+            <p>
+              کتاب استدلال می‌کند که واژه‌های نوشته‌شده هرگز نمی‌توانند تمام معنای پیام الهی را منتقل
+              کنند. آنچه از پیامبران به جای مانده، «کلماتی ناقص» است. هدفِ این کتاب، پُرکردنِ این
+              شکاف با ارتباطی زنده و دسترسی به نویسندگان آن است.
+            </p>
+          </article>
+          <article class="card" data-reveal>
+            <span class="card__icon" aria-hidden="true"><svg class="ic"><use href="#ic-star8"/></svg></span>
+            <h3>تناسخ و خانواده روحی</h3>
+            <p>
+              یکی از نشانه‌های مرجعیت الهی در این کتاب، روشن‌سازی معنای «رجعت» است — بازگشت یا
+              تناسخِ ارواح. کتاب به موضوع هویت‌های روحانی، تجسم‌ها و روابط میان ارواح در قالب
+              «خانواده روحی» می‌پردازد.
+            </p>
+          </article>
+          <article class="card" data-reveal>
+            <span class="card__icon" aria-hidden="true"><svg class="ic"><use href="#ic-star8"/></svg></span>
+            <h3>هدف غایی: خدا در آفرینش</h3>
+            <p>
+              کتاب از مراحل پنج‌گانه رشد انسان سخن می‌گوید: ایمان، نبوت، رسالت، امامت و در نهایت
+              «خدا در آفرینش شدن» — تجلّی صفات الهی تا آنجا که مانعی (خودِ انسانی) باقی نماند.
+              این فرایند همان «تکمیل کلمات» است.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament" aria-hidden="true"><svg class="ic"><use href="#ic-star8"/></svg></div>
+
+    <section class="section" aria-labelledby="sample-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="sample-title">نمونه‌ای از کتاب: در نخست — عهد با آدم</h2>
+          <p>نخستین درِ کتاب، عهد اول را شرح می‌دهد؛ عهدی که خدا با آدم بست.</p>
+        </div>
+        <div class="measure" style="margin-inline: auto;">
+          <p>
+            در این روایت، آدم نخستین خلیفه خدا بر زمین بود. خدا با او عهدی بست: فرمان به باروری و
+            افزایش، و نهی از نزدیک‌شدن به «درخت» — که در این کتاب نمادِ دانشِ محمد و خاندان محمد
+            است. آدم از روی حسد به مقام آنان، از درختِ نهی‌شده خورد و از باغ عدن رانده شد.
+          </p>
+          <p>
+            کتاب روشن می‌کند که باغ عدن در زمین بود — نه در آسمان — و درختان آن، درختانِ این
+            جهان نبودند. «درخت» در این روایت، استعاره‌ای است از کلمات و شخصیت‌های الهی. این شرح
+            با استناد به قرآن، تورات، انجیل و روایات اهل‌بیت، همراه با ارجاع به متون گنوسیِ
+            کتابخانه نجع حمادی ارائه شده است.
+          </p>
+          <p>
+            آدم و حوا پس از توبه، آمرزیده شدند و عهد بازآفرینی شد. اما نخستین گناه — حسد — سرچشمه
+            همه فسادهای بعدی شد. این نخستین حلقه از زنجیره عهدهای هفت‌گانه است.
+          </p>
+          <div class="btn-row" style="margin-top: var(--space-4);">
+            <a class="btn btn--primary" href="assets/pdf/The-Goal-of-the-Wise-Persian.pdf" target="_blank" rel="noopener noreferrer"><svg class="ic" aria-hidden="true"><use href="#ic-reader"/></svg> مطالعه کامل کتاب</a>
+            <a class="btn btn--ghost" href="teachings.html">عهدها در صفحه آموزه‌ها</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament" aria-hidden="true"><svg class="ic"><use href="#ic-star8"/></svg></div>
+
+    <section class="section section--alt" aria-labelledby="context-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="context-title">جایگاه کتاب در این دعوت</h2>
+          <p>«هدف حکیم» در کنار «مانیفست مهدی» دو کتاب بنیادین این دعوت به شمار می‌آیند.</p>
+        </div>
+        <div class="card-grid card-grid--2">
+          <article class="card" data-reveal>
+            <h3>رابطه با مانیفست مهدی</h3>
+            <p>
+              «مانیفست مهدی» نقطه آغاز آشنایی با این دعوت است و چارچوب عهدها و معیارهای شناخت را
+              بازمی‌گوید. «هدف حکیم» در ادامه، به ژرفای موضوع‌هایی می‌پردازد که در مانیفست تنها به
+              اشاره آمده — تناسخ، خانواده روحی، ماهیت واقعیت، و دیگر موضوع‌های کیهان‌شناختی و
+              معنوی. پیشنهاد می‌شود آشنایی با مانیفست مهدی در آغاز باشد.
+            </p>
+            <a class="card__link" href="manifesto.html">مانیفست مهدی</a>
+          </article>
+          <article class="card" data-reveal>
+            <h3>دسترسی زنده به نویسندگان</h3>
+            <p>
+              یکی از ویژگی‌هایی که کتاب بر آن تأکید دارد، دسترسی به نویسندگان آن است. برخلاف
+              کتاب‌های مقدس که نویسندگانشان قرن‌ها پیش درگذشته‌اند، عبدالله هاشم (ابا الصادق) و
+              احمد الحسن در دسترس‌اند و می‌توان پرسش‌ها را با آنان در میان گذاشت.
+            </p>
+            <a class="card__link" href="contact.html">ارتباط و پرسش</a>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -210,7 +378,11 @@
         <p class="site-footer__desc">
           وب‌سایت معرفی «دین صلح و نور احمدی»؛ برای آشنایی با آموزه‌های این دعوت، مطالعه منابع اصلی و ارتباط با جامعه فارسی‌زبان.
         </p>
-        <a class="btn btn--gold" href="https://t.me/theahmadireligionfarsi" target="_blank" rel="noopener" aria-label="گروه تلگرام دین صلح و نور احمدی — باز شدن در تلگرام"><svg class="ic" aria-hidden="true"><use href="#ic-tg"/></svg> گروه تلگرام دین صلح و نور احمدی</a>
+        <div class="site-footer__social">
+          <a href="https://t.me/theahmadireligionfarsi" target="_blank" rel="noopener" aria-label="گروه تلگرام دین صلح و نور احمدی"><svg class="ic" aria-hidden="true"><use href="#ic-tg"/></svg> تلگرام</a>
+          <a href="https://youtube.com/@ahmadireligion_fa" target="_blank" rel="noopener" aria-label="کانال یوتیوب فارسی دین صلح و نور احمدی"><svg class="ic" aria-hidden="true"><use href="#ic-yt"/></svg> یوتیوب فارسی</a>
+          <a href="https://youtube.com/@themahdihasappeared" target="_blank" rel="noopener" aria-label="The Mahdi Has Appeared YouTube channel"><svg class="ic" aria-hidden="true"><use href="#ic-yt"/></svg> English YouTube</a>
+        </div>
       </div>
       <nav aria-label="ناوبری پابرگ">
         <h3 class="site-footer__heading">صفحه‌ها</h3>

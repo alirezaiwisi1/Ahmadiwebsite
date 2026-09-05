@@ -96,9 +96,39 @@
     });
 
     window.addEventListener("resize", function () {
-      if (window.innerWidth >= 1024 && nav.classList.contains("is-open")) {
+      if (window.innerWidth >= 1100 && nav.classList.contains("is-open")) {
         closeNav();
       }
+    });
+  }
+
+  /* ---------- More dropdown (compact nav) ---------- */
+  var moreBtn = document.querySelector(".nav-more-btn");
+  var moreDropdown = document.querySelector(".nav-more-dropdown");
+  if (moreBtn && moreDropdown) {
+    var closeMore = function () {
+      moreDropdown.classList.remove("is-open");
+      moreBtn.setAttribute("aria-expanded", "false");
+    };
+
+    moreBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var open = moreDropdown.classList.toggle("is-open");
+      moreBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    document.addEventListener("click", function (e) {
+      if (!moreBtn.contains(e.target) && !moreDropdown.contains(e.target)) {
+        closeMore();
+      }
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && moreDropdown.classList.contains("is-open")) {
+        closeMore();
+        moreBtn.focus();
+      }
+    });
+    moreDropdown.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", closeMore);
     });
   }
 

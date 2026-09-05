@@ -5,7 +5,7 @@
   <script>(function(){try{var t=localStorage.getItem("ahmadi-theme");if(!t){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}document.documentElement.setAttribute("data-theme",t);document.documentElement.classList.add("js");}catch(e){document.documentElement.classList.add("js");}})();</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>آشنایی با دین | دین صلح و نور احمدی</title>
-  <meta name="description" content="معرفی دین صلح و نور احمدی بر پایه منابع رسمی این دعوت؛ مبانی دعوت، عهدهای هفت‌گانه، عهد هفتم، شخصیت‌های محوری و مسیر مطالعه.">
+  <meta name="description" content="معرفی کوتاه دین صلح و نور احمدی: این دعوت چیست، بر پایه کدام منابع و با کدام هدف؛ همراه با مسیر ادامه مطالعه در آموزه‌ها، مهدی و کتاب‌ها.">
   <link rel="canonical" href="https://alirezaiwisi1.github.io/Ahmadiwebsite/about.html">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fa_IR">
@@ -51,6 +51,7 @@
     <symbol id="ic-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></symbol>
     <symbol id="ic-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><line x1="12" y1="1.5" x2="12" y2="3.5"/><line x1="12" y1="20.5" x2="12" y2="22.5"/><line x1="4.6" y1="4.6" x2="6" y2="6"/><line x1="18" y1="18" x2="19.4" y2="19.4"/><line x1="1.5" y1="12" x2="3.5" y2="12"/><line x1="20.5" y1="12" x2="22.5" y2="12"/><line x1="4.6" y1="19.4" x2="6" y2="18"/><line x1="18" y1="6" x2="19.4" y2="4.6"/></g></symbol>
     <symbol id="ic-star8" viewBox="0 0 24 24"><path fill="currentColor" d="M22 12 17.1 14.1 19.1 19.1 14.1 17.1 12 22 9.9 17.1 4.9 19.1 6.9 14.1 2 12 6.9 9.9 4.9 4.9 9.9 6.9 12 2 14.1 6.9 19.1 4.9 17.1 9.9Z"/></symbol>
+<symbol id="ic-yt" viewBox="0 0 24 24"><path fill="currentColor" d="M23.5 6.2c-.3-1-1.1-1.8-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6c-1 .3-1.8 1.1-2.1 2.1C0 8.1 0 12 0 12s0 3.9.5 5.8c.3 1 1.1 1.8 2.1 2.1 1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6c1-.3 1.8-1.1 2.1-2.1.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.5 15.5V8.5l6.3 3.5-6.3 3.5z"/></symbol>
   </svg>
 
   <div class="reading-progress" aria-hidden="true"><span></span></div>
@@ -66,15 +67,31 @@
           <span class="site-nav__toggle-bars" aria-hidden="true"></span>
         </button>
         <ul class="site-nav__list" id="primary-menu">
-          <li><a href="index.html">خانه</a></li>
+          <li class="nav-home"><a href="index.html">خانه</a></li>
           <li><a href="about.html" aria-current="page">آشنایی با دین</a></li>
           <li><a href="teachings.html">آموزه‌ها</a></li>
           <li><a href="mahdi.html">مهدی</a></li>
           <li><a href="resources.html">کتاب‌ها و منابع</a></li>
-          <li><a href="faq.html">پرسش‌های متداول</a></li>
-          <li><a href="contact.html">ارتباط</a></li>
-          <li><a class="nav-tg" href="https://t.me/theahmadireligionfarsi" target="_blank" rel="noopener" aria-label="گروه تلگرام دین صلح و نور احمدی — باز شدن در تلگرام"><svg class="ic" aria-hidden="true"><use href="#ic-tg"/></svg>گروه تلگرام</a></li>
+          <li class="nav-sec"><a href="faq.html">پرسش‌های متداول</a></li>
+          <li class="nav-sec"><a href="contact.html">ارتباط</a></li>
+          <li class="nav-more-wrap">
+            <button class="nav-more-btn" type="button" aria-expanded="false" aria-haspopup="true">
+              بیشتر <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="nav-more-dropdown">
+              <a href="faq.html">پرسش‌های متداول</a>
+              <a href="contact.html">ارتباط</a>
+              <a href="manifesto.html">مانیفست مهدی</a>
+              <a href="wisdom.html">هدف حکیم</a>
+            </div>
+          </li>
+          <li class="nav-social-item"><a class="nav-tg" href="https://t.me/theahmadireligionfarsi" target="_blank" rel="noopener" aria-label="گروه تلگرام دین صلح و نور احمدی — باز شدن در تلگرام"><svg class="ic" aria-hidden="true"><use href="#ic-tg"/></svg>گروه تلگرام</a></li>
+          <li class="nav-social-item"><a class="nav-tg" href="https://youtube.com/@ahmadireligion_fa" target="_blank" rel="noopener" aria-label="کانال یوتیوب فارسی دین صلح و نور احمدی — باز شدن در یوتیوب"><svg class="ic" aria-hidden="true"><use href="#ic-yt"/></svg>یوتیوب فارسی</a></li>
         </ul>
+        <div class="nav-social">
+          <a href="https://t.me/theahmadireligionfarsi" target="_blank" rel="noopener" aria-label="گروه تلگرام دین صلح و نور احمدی"><svg class="ic" aria-hidden="true"><use href="#ic-tg"/></svg></a>
+          <a href="https://youtube.com/@ahmadireligion_fa" target="_blank" rel="noopener" aria-label="کانال یوتیوب فارسی دین صلح و نور احمدی"><svg class="ic" aria-hidden="true"><use href="#ic-yt"/></svg></a>
+        </div>
       </nav>
       <button class="theme-toggle" id="theme-toggle" type="button" aria-label="تغییر پوسته روشن و تاریک" aria-pressed="false">
         <svg class="ic theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true"><use href="#ic-moon"/></svg>
@@ -94,8 +111,8 @@
     <section class="page-header container">
       <h1>آشنایی با دین صلح و نور احمدی</h1>
       <p class="lead">
-        این صفحه نقطه شروع آشنایی با «دین صلح و نور احمدی» است: تصویر کلی دعوت، مبانی آن،
-        عهدهای هفت‌گانه، شخصیت‌های محوری و مسیری روشن برای ادامه مطالعه.
+        این صفحه نقطه شروع آشنایی با «دین صلح و نور احمدی» است: چه کسانی، با چه باوری و بر پایه کدام
+        منابع.
       </p>
     </section>
 
@@ -109,6 +126,13 @@
             انسان عهدهایی بسته است و این دعوت خود را در پیوند با آخرین حلقه‌ی همین زنجیره معرفی می‌کند.
           </p>
           <p>
+            مانیفست مهدی — متن پایه این دعوت — چنین آغاز می‌کند که یهودیان ۲۶۰۰ سال در انتظار مسیح
+            بوده‌اند، بوداییان ۲۵۰۰ سال در انتظار میتریا، مسیحیان بیش از ۲۰۰۰ سال در انتظار بازگشت عیسی و
+            مسلمانان ۱۴۰۰ سال در انتظار مهدی؛ و پیام کتاب این است که «آنچه به شما وعده داده شده، فرا رسیده
+            است». در همان آغاز نیز روشن می‌شود که برپایی عدالت، کار یک تن نیست: «خداوند حال هیچ قومی را
+            دگرگون نمی‌کند مگر آنکه آنان حال خود را دگرگون کنند» (قرآن، رعد ۱۱).
+          </p>
+          <p>
             متن پایه این دعوت «مانیفست مهدی» است و «هدف حکیم» نیز در کنار آن از کتاب‌های بنیادین به شمار
             می‌آید. آنچه در این وب‌سایت می‌خوانید برگرفته از همین متن‌هاست.
           </p>
@@ -116,120 +140,55 @@
       </div>
     </section>
 
-    <section class="section section--alt" aria-labelledby="foundations-title">
+    <section class="section section--alt" aria-labelledby="aboutus-title">
       <div class="container">
         <div class="section-head">
-          <h2 id="foundations-title">مبانی دعوت</h2>
-          <p>سه ستون که در کنار هم، تصویر این دعوت را کامل می‌کنند:</p>
+          <h2 id="aboutus-title">دربارهٔ ما</h2>
+        </div>
+        <div class="measure" style="margin-inline: auto;">
+          <p>
+            «دین صلح و نور احمدی» نام سازمانی است که برای نمایندگی این دین شکل گرفته و در ایالات متحده
+            آمریکا با وضعیت 501c3 به ثبت رسیده است؛ همچنین در بریتانیا به‌عنوان مؤسسهٔ خیریهٔ رسمی ثبت
+            شده است. این دعوت با نام‌های «پرچم‌های سیاه مشرق»، «انصار امام مهدی» و «یاران عهد هفتم» نیز
+            شناخته می‌شود.
+          </p>
+          <span class="source-ref">منبع: بخش «About us» در پایان مانیفست مهدی.</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament" aria-hidden="true"><svg class="ic"><use href="#ic-star8"/></svg></div>
+
+    <section class="section" aria-labelledby="pillars-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="pillars-title">از کجا ادامه دهیم؟</h2>
+          <p>برای آشنایی عمیق‌تر، این مسیر پیشنهاد می‌شود:</p>
         </div>
         <div class="card-grid card-grid--3">
           <article class="card" data-reveal>
             <span class="card__icon" aria-hidden="true"><svg class="ic"><use href="#ic-star8"/></svg></span>
-            <h3>عهدهای الهی</h3>
-            <p>در این نگاه، خداوند در طول تاریخ با انسان هفت عهد بسته است؛ از عهد نخست با آدم تا عهد هفتم با احمد الحسن.</p>
-            <a class="card__link" href="teachings.html">عهدهای هفت‌گانه</a>
+            <h3>آموزه‌ها</h3>
+            <p>خانهٔ اصلی آموزه‌ها: سه معیار شناخت حجت، عهدهای هفت‌گانه و موضوع‌هایی چون روح و تناسخ و دولت عدل.</p>
+            <a class="card__link" href="teachings.html">صفحه آموزه‌ها</a>
           </article>
           <article class="card card--gold" data-reveal>
-            <span class="card__icon" aria-hidden="true"><svg class="ic"><use href="#ic-star8"/></svg></span>
-            <h3>سه معیار شناخت حجت</h3>
-            <p>اگر رهبر را خدا برمی‌گزیند، مردم از کجا او را بشناسند؟ در این نگاه، سه معیار در کنار هم او را نشان می‌دهند: «وصیت»، «علم» و «پرچم».</p>
-            <a class="card__link" href="teachings.html#criteria">سه معیار شناخت</a>
+            <span class="card__icon" aria-hidden="true"><svg class="ic"><use href="#ic-book"/></svg></span>
+            <h3>مهدی و عهد هفتم</h3>
+            <p>وصیت پیامبر با دوازده امام و دوازده مهدی، شخصیت‌های محوری این دعوت و دعوت به گردهمایی.</p>
+            <a class="card__link" href="mahdi.html">صفحه مهدی</a>
           </article>
           <article class="card" data-reveal>
-            <span class="card__icon" aria-hidden="true"><svg class="ic"><use href="#ic-star8"/></svg></span>
-            <h3>پیوند با میراث ادیان</h3>
-            <p>این دعوت خود را ادامه‌ی زنجیره‌ی پیامبران پیشین می‌داند و وعده مهدی را حلقه اتصال آن‌ها می‌داند.</p>
-            <a class="card__link" href="mahdi.html">مهدی و عهد هفتم</a>
+            <span class="card__icon" aria-hidden="true"><svg class="ic"><use href="#ic-reader"/></svg></span>
+            <h3>کتاب‌ها و منابع</h3>
+            <p>مطالعه آنلاین و دانلود مستقیم «مانیفست مهدی» و «هدف حکیم»، همراه با خوانش‌های صوتی.</p>
+            <a class="card__link" href="resources.html">کتاب‌ها و منابع</a>
           </article>
         </div>
       </div>
     </section>
 
     <div class="ornament" aria-hidden="true"><svg class="ic"><use href="#ic-star8"/></svg></div>
-
-    <section class="section" aria-labelledby="covenants-title">
-      <div class="container">
-        <h2 id="covenants-title">عهدهای الهی</h2>
-        <div class="measure">
-          <p>
-            تاریخ هدایت الهی در این نگاه هفت عهد دارد؛ هر عهد به دست شخصیتی برگزیده گشوده شده و
-            نام جانشینان در وصیتِ حامل پیشین نوشته شده است:
-          </p>
-        </div>
-        <div class="card-grid card-grid--3">
-          <article class="card" data-reveal><span class="covenant-num" aria-hidden="true">۱</span><h3>عهد اول با آدم</h3><p>نخستین خلیفهٔ خدا در زمین؛ نام جانشینان را تا روزگار نوح در وصیتش نوشت.</p></article>
-          <article class="card" data-reveal><span class="covenant-num" aria-hidden="true">۲</span><h3>عهد دوم با نوح</h3><p>پس از طوفان، عهد را با شریعتی نو بنیان نهاد و جانشینان را تا ابراهیم در وصیتش نام برد.</p></article>
-          <article class="card" data-reveal><span class="covenant-num" aria-hidden="true">۳</span><h3>عهد سوم با ابراهیم</h3><p>عهد را با شریعت و قانونی نو گشود؛ در این نگاه، سرزمینی برای فرمانروایی به او عطا شد.</p></article>
-          <article class="card" data-reveal><span class="covenant-num" aria-hidden="true">۴</span><h3>عهد چهارم با موسی</h3><p>قومش را از فرعون رهانید؛ در وصیتش یوشع را برگزید و به آمدن عیسی بشارت داد.</p></article>
-          <article class="card" data-reveal><span class="covenant-num" aria-hidden="true">۵</span><h3>عهد پنجم با عیسی</h3><p>شمعون پطرس را وصی خود کرد و به پیامبری پس از خود بشارت داد که نامش «احمد» است.</p></article>
-          <article class="card" data-reveal><span class="covenant-num" aria-hidden="true">۶</span><h3>عهد ششم با محمد</h3><p>در واپسین شب زندگی، وصیتش را املا کرد: دوازده امام، و پس از آنان دوازده مهدی.</p></article>
-        </div>
-        <div class="card card--gold" style="margin-top: var(--space-4);" data-reveal>
-          <span class="covenant-num" aria-hidden="true">۷</span>
-          <h3>عهد هفتم با احمد الحسن</h3>
-          <p>
-            در این روایت، مهدی با عهد هفتم و «کتابی نو و امری نو» برانگیخته می‌شود و در منابع این دعوت
-            این عهد با احمد الحسن پیوند خورده است؛ این باور هسته مرکزی آموزه‌های این دین است.
-          </p>
-          <a class="card__link" href="teachings.html">شرح عهدها در صفحه آموزه‌ها</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--alt" aria-labelledby="figures-title">
-      <div class="container">
-        <div class="section-head">
-          <h2 id="figures-title">شخصیت‌های محوری</h2>
-          <p>روایت این دعوت حول سه محور شکل می‌گیرد:</p>
-        </div>
-        <div class="card-grid card-grid--3">
-          <article class="card" data-reveal>
-            <h3>احمد الحسن</h3>
-            <p>حامل عهد هفتم و مهدی موعود در این نگاه؛ کسی که این دعوت خود را ادامه‌ی راه او می‌داند.</p>
-            <a class="card__link" href="mahdi.html">بیشتر بخوانید</a>
-          </article>
-          <article class="card" data-reveal>
-            <h3>عبدالله هاشم (ابا الصادق)</h3>
-            <p>رهبر امروزِ این جامعه؛ کتاب «هدف حکیم» به او نسبت داده شده است.</p>
-            <a class="card__link" href="wisdom.html">هدف حکیم</a>
-          </article>
-          <article class="card" data-reveal>
-            <h3>پیامبران حامل عهدها</h3>
-            <p>آدم، نوح، ابراهیم، موسی، عیسی و محمد — حاملان عهدهای پیشین و حلقه‌های زنجیره هدایت الهی.</p>
-            <a class="card__link" href="teachings.html">عهدهای هفت‌گانه</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <div class="ornament" aria-hidden="true"><svg class="ic"><use href="#ic-star8"/></svg></div>
-
-    <section class="section" aria-labelledby="journey-title">
-      <div class="container">
-        <div class="section-head">
-          <h2 id="journey-title">مسیر مطالعه</h2>
-          <p>برای آشنایی گام‌به‌گام، این ترتیب را پیشنهاد می‌کنیم:</p>
-        </div>
-        <ol class="steps">
-          <li data-reveal>
-            <h3>آشنایی کوتاه</h3>
-            <p>با همین صفحه و صفحه «آموزه‌ها» تصویر کلی را بسازید.</p>
-          </li>
-          <li data-reveal>
-            <h3>مانیفست مهدی</h3>
-            <p>متن پایه را مطالعه و دریافت کنید؛ شرح عهدها و استدلال‌های اصلی در آن جای دارند.</p>
-          </li>
-          <li data-reveal>
-            <h3>هدف حکیم</h3>
-            <p>کتاب بنیادین دوم را با خوانش صوتی آن دنبال کنید.</p>
-          </li>
-          <li data-reveal>
-            <h3>گفت‌وگو</h3>
-            <p>پرسش‌هایتان را در گروه تلگرام فارسی‌زبان مطرح کنید.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
 
     <section class="section" aria-labelledby="cta-title">
       <div class="container">
@@ -255,7 +214,11 @@
         <p class="site-footer__desc">
           وب‌سایت معرفی «دین صلح و نور احمدی»؛ برای آشنایی با آموزه‌های این دعوت، مطالعه منابع اصلی و ارتباط با جامعه فارسی‌زبان.
         </p>
-        <a class="btn btn--gold" href="https://t.me/theahmadireligionfarsi" target="_blank" rel="noopener" aria-label="گروه تلگرام دین صلح و نور احمدی — باز شدن در تلگرام"><svg class="ic" aria-hidden="true"><use href="#ic-tg"/></svg> گروه تلگرام دین صلح و نور احمدی</a>
+        <div class="site-footer__social">
+          <a href="https://t.me/theahmadireligionfarsi" target="_blank" rel="noopener" aria-label="گروه تلگرام دین صلح و نور احمدی"><svg class="ic" aria-hidden="true"><use href="#ic-tg"/></svg> تلگرام</a>
+          <a href="https://youtube.com/@ahmadireligion_fa" target="_blank" rel="noopener" aria-label="کانال یوتیوب فارسی دین صلح و نور احمدی"><svg class="ic" aria-hidden="true"><use href="#ic-yt"/></svg> یوتیوب فارسی</a>
+          <a href="https://youtube.com/@themahdihasappeared" target="_blank" rel="noopener" aria-label="The Mahdi Has Appeared YouTube channel"><svg class="ic" aria-hidden="true"><use href="#ic-yt"/></svg> English YouTube</a>
+        </div>
       </div>
       <nav aria-label="ناوبری پابرگ">
         <h3 class="site-footer__heading">صفحه‌ها</h3>

@@ -7,7 +7,7 @@
  *  - Images/fonts: cache-first (immutable content).
  */
 
-const VERSION = "ahmadi-v2.2.0";
+const VERSION = "ahmadi-v2.3.0";
 const SHELL_CACHE = VERSION + "-shell";
 const ASSET_CACHE = VERSION + "-assets";
 
